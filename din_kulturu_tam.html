@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Din Kültürü ve Ahlak Bilgisi — TYT AYT Kavramlar | Ayşe Yazıcı</title>
+<style>
+:root{
+  --mor:#5b0eaf;
+  --mor2:#7b2fbe;
+  --mor3:#9c4dcc;
+  --mor-koyu:#3a0080;
+  --altin:#f5c518;
+  --altin2:#c8a000;
+  --bg:#2d1354;
+  --bg2:#3d1a6e;
+  --kart:#fff;
+  --metin:#1a0033;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#041f14;min-height:100vh;color:var(--metin);font-size:13.5px;}
+
+/* HEADER */
+header{
+  background:linear-gradient(160deg,#031a10 0%,#052e1c 55%,#063d25 100%);
+  color:#fff;
+  text-align:center;
+  padding:64px 40px 52px;
+  border-bottom:3px solid #10b981;
+  position:relative;
+  overflow:hidden;
+}
+header::before{
+  content:'☪';
+  position:absolute;
+  font-size:18em;
+  opacity:.04;
+  right:-40px;top:-30px;
+  pointer-events:none;
+  line-height:1;
+  color:#fff;
+}
+header h1{
+  font-size:3.1em;
+  letter-spacing:5px;
+  margin-bottom:14px;
+  color:#fff;
+  font-weight:900;
+  text-transform:uppercase;
+  line-height:1.18;
+}
+header h2{
+  font-size:1.5em;
+  font-weight:800;
+  letter-spacing:6px;
+  color:#6ee7b7;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hdr-badges{
+  display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;
+  margin-bottom:20px;
+}
+.hdr-badge{
+  background:rgba(16,185,129,.15);
+  border:1.5px solid rgba(16,185,129,.4);
+  color:#6ee7b7;
+  border-radius:20px;
+  padding:5px 18px;
+  font-size:.78em;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+header p{
+  font-size:.95em;
+  font-weight:600;
+  color:rgba(255,255,255,.65);
+  letter-spacing:2px;
+}
+
+/* TABS */
+.tab-nav{display:flex;background:#052e1c;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(255,255,255,.07);}
+.tab-btn{flex:1;padding:14px 10px;border:none;background:transparent;font-size:.9em;font-weight:700;cursor:pointer;color:rgba(110,231,183,.45);font-family:inherit;letter-spacing:.3px;border-bottom:3px solid transparent;transition:all .2s;}
+.tab-btn.active{color:#6ee7b7;border-bottom:3px solid #10b981;background:rgba(16,185,129,.08);}
+.tab-btn:hover:not(.active){background:rgba(16,185,129,.05);color:rgba(110,231,183,.75);}
+.tab-icon{font-size:1.1em;margin-right:6px;}
+
+/* ── ANIMASYONLAR ── */
+@keyframes shimmer{
+  0%{background-position:200% center;}
+  100%{background-position:-200% center;}
+}
+@keyframes slideDown{
+  from{opacity:0;transform:translateY(-18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes glowPulse{
+  0%,100%{text-shadow:0 0 8px rgba(245,197,24,.6),0 0 20px rgba(245,197,24,.3);}
+  50%{text-shadow:0 0 18px rgba(245,197,24,1),0 0 40px rgba(245,197,24,.6);}
+}
+@keyframes borderFlow{
+  0%{border-left-color:var(--altin);}
+  50%{border-left-color:#fff8b0;}
+  100%{border-left-color:var(--altin);}
+}
+@keyframes waveChar{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+}
+@keyframes badgePop{
+  0%{transform:scale(.85);opacity:0;}
+  70%{transform:scale(1.06);}
+  100%{transform:scale(1);opacity:1;}
+}
+@keyframes headerGrad{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* KAVRAMLAR TAB */
+#tab-kavramlar{display:none;padding-bottom:60px;background:#041f14;min-height:100vh;}
+.kav-container{max-width:960px;margin:0 auto;padding:24px 16px;}
+
+/* Bölüm kartları */
+.bolum{
+  margin-bottom:20px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.07);
+  animation:fadeUp .45s ease both;
+}
+.bolum:nth-child(1){animation-delay:.04s;}
+.bolum:nth-child(2){animation-delay:.08s;}
+.bolum:nth-child(3){animation-delay:.12s;}
+.bolum:nth-child(4){animation-delay:.16s;}
+.bolum:nth-child(5){animation-delay:.2s;}
+.bolum:nth-child(6){animation-delay:.24s;}
+.bolum:nth-child(7){animation-delay:.28s;}
+.bolum:nth-child(8){animation-delay:.32s;}
+.bolum:nth-child(9){animation-delay:.36s;}
+.bolum:nth-child(10){animation-delay:.4s;}
+
+/* Üst yeşil şerit */
+.bolum::before{
+  content:'';
+  display:block;
+  height:4px;
+  background:linear-gradient(90deg,#064e3b,#10b981,#064e3b);
+}
+
+/* Bölüm başlık */
+.bolum-baslik{
+  background:#063d25;
+  color:#fff;
+  padding:16px 20px 14px;
+  font-size:1em;
+  font-weight:800;
+  border-left:5px solid #10b981;
+  letter-spacing:.6px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-transform:uppercase;
+  cursor:pointer;
+  user-select:none;
+  transition:background .18s;
+}
+.bolum-baslik:hover{background:#074530;}
+.barrow{
+  margin-left:auto;
+  font-size:1em;
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  flex-shrink:0;
+  opacity:.6;
+}
+.bolum.open .barrow{transform:rotate(180deg);}
+
+/* Accordion içerik */
+.bolum-content{
+  overflow:hidden;
+  max-height:0;
+  transition:max-height .45s cubic-bezier(.4,0,.2,1);
+}
+.bolum.open .bolum-content{max-height:9999px;}
+
+/* Numara rozeti */
+.bolum-baslik .bno{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;height:32px;
+  border-radius:8px;
+  background:#10b981;
+  color:#fff;
+  font-size:.8em;
+  font-weight:900;
+  flex-shrink:0;
+}
+
+/* Başlık metni */
+.bolum-baslik .btxt{
+  color:#fff;
+}
+
+/* Sınıf bandı */
+.bolum-sinif{
+  background:#052e1c;
+  color:#6ee7b7;
+  padding:6px 20px;
+  font-size:.75em;
+  font-style:italic;
+  font-weight:600;
+  border-left:5px solid #065f46;
+  letter-spacing:.2px;
+}
+
+/* Tablo */
+table{width:100%;border-collapse:collapse;}
+thead th{
+  background:#063d25;
+  color:#a7f3d0;
+  padding:10px 14px;
+  text-align:left;
+  font-size:.78em;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+thead th:first-child{width:27%;}
+tbody tr:nth-child(even){background:#052e1c;}
+tbody tr:nth-child(odd){background:#041f14;}
+tbody tr{transition:background .15s;}
+tbody tr:hover{background:#063d25;}
+td{padding:10px 14px;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.65;color:#d1fae5;}
+td:first-child{
+  font-weight:700;
+  color:#6ee7b7;
+  font-size:.9em;
+  letter-spacing:.2px;
+}
+
+/* QUIZ TAB */
+#tab-quiz{display:none;padding-bottom:60px;background:#041f14;min-height:100vh;}
+.qz-inner{max-width:820px;margin:0 auto;padding:16px 16px;}
+
+/* ── QUIZ GENEL ── */
+#tab-quiz{display:none;padding-bottom:60px;}
+
+/* Quiz başlık bandı */
+.qz-hero{
+  background:#063d25;
+  color:#fff;
+  padding:22px 24px 18px;
+  display:flex;align-items:center;gap:16px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.qz-hero-icon{font-size:2.4em;}
+.qz-hero-info h3{font-size:1.05em;font-weight:900;margin-bottom:3px;letter-spacing:.5px;}
+.qz-hero-info p{font-size:.8em;opacity:.8;}
+.qz-mode-badge{
+  margin-left:auto;
+  background:var(--altin);
+  color:#1a0033;
+  font-size:.72em;
+  font-weight:900;
+  padding:5px 14px;
+  border-radius:20px;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  flex-shrink:0;
+}
+
+/* Progress */
+.prog-wrap{
+  background:#052e1c;
+  border-radius:0;
+  padding:14px 22px 12px;
+  margin-bottom:0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  position:sticky;top:53px;z-index:100;
+}
+.prog-meta{display:flex;justify-content:space-between;align-items:center;font-size:.8em;color:#6ee7b7;margin-bottom:8px;}
+.prog-meta span:first-child{font-weight:700;color:#a7f3d0;}
+.prog-bg{background:rgba(255,255,255,.1);border-radius:20px;height:8px;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,#10b981,#34d399);border-radius:20px;transition:width .6s cubic-bezier(.4,0,.2,1);width:0%;}
+
+/* Skor şeridi */
+.score-strip{
+  display:flex;gap:8px;padding:10px 22px;
+  background:#041f14;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.badge{
+  padding:6px 14px;border-radius:20px;font-size:.82em;font-weight:800;
+  display:flex;align-items:center;gap:5px;
+}
+.b-ok{background:#dcfce7;color:#15803d;border:1.5px solid #86efac;}
+.b-no{background:#fee2e2;color:#b91c1c;border:1.5px solid #fca5a5;}
+.b-re{background:#ede9fe;color:var(--mor);border:1.5px solid #c4b5fd;}
+
+/* Alt bölüm başlığı */
+.sub-kav{
+  background:#063d25;
+  color:#a7f3d0;
+  padding:9px 18px;
+  font-size:.82em;
+  font-weight:700;
+  letter-spacing:.5px;
+  border-left:4px solid #10b981;
+  display:flex;align-items:center;gap:8px;
+}
+
+/* ══════════════════════════════════════
+   LANDING — tek renkli, bütünleşik
+══════════════════════════════════════ */
+@keyframes landIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+#landing{
+  min-height:calc(100vh - 56px);
+  display:flex;
+  flex-direction:column;
+  background:#041f14;
+  animation:landIn .5s ease both;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Büyük arka plan ☪ filigranı — tüm landing'i kaplıyor */
+#landing .land-bg-icon{
+  position:absolute;
+  font-size:28em;
+  opacity:.035;
+  bottom:-60px;right:-60px;
+  pointer-events:none;
+  user-select:none;
+  line-height:1;
+  color:#fff;
+}
+
+/* ── Üst başlık ── */
+.land-header{
+  flex:0 0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:68px 32px 44px;
+  text-align:center;
+  position:relative;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.land-header .land-eyebrow{
+  font-size:.7em;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(110,231,183,.5);
+  margin-bottom:14px;
+}
+.land-header h2{
+  font-size:2.55em;
+  font-weight:900;
+  color:#fff;
+  line-height:1.18;
+  letter-spacing:.8px;
+  margin-bottom:16px;
+}
+.land-tyt-row{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:16px;
+}
+.land-tyt-badge{
+  background:rgba(16,185,129,.18);
+  border:1.5px solid rgba(16,185,129,.45);
+  color:#6ee7b7;
+  border-radius:8px;
+  padding:5px 16px;
+  font-size:.82em;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+.land-tyt-sep{color:rgba(255,255,255,.25);font-size:1.2em;font-weight:300;}
+.land-tyt-label{
+  font-size:.82em;
+  color:rgba(255,255,255,.45);
+  font-weight:600;
+  letter-spacing:.5px;
+}
+.land-header .land-meta{
+  font-size:.82em;
+  color:rgba(110,231,183,.55);
+  letter-spacing:.8px;
+  font-weight:600;
+}
+
+.land-rule{display:none;}
+
+/* ── İki tile — aynı mor paletten, şeffaf cam ── */
+.land-tiles{
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding:24px 24px 0;
+  gap:14px;
+  align-items:stretch;
+}
+
+.land-tile{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  padding:28px 26px 26px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  font-family:inherit;
+  text-align:left;
+  overflow:hidden;
+  transition:border-color .22s, transform .22s, box-shadow .22s;
+  min-height:240px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(6px);
+}
+.land-tile:hover{
+  border-color:rgba(245,197,24,.45);
+  transform:translateY(-3px);
+  box-shadow:0 16px 40px rgba(0,0,0,.3);
+}
+.land-tile:hover .tile-arrow{transform:translateX(6px);}
+
+/* Köşe halka deseni */
+.land-tile::before{
+  content:'';
+  position:absolute;
+  top:-50px;right:-50px;
+  width:170px;height:170px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.07);
+  pointer-events:none;
+}
+.land-tile::after{
+  content:'';
+  position:absolute;
+  top:-90px;right:-90px;
+  width:260px;height:260px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.04);
+  pointer-events:none;
+}
+
+/* Tile içerik */
+.tile-icon{
+  font-size:2.4em;
+  margin-bottom:auto;
+  padding-bottom:20px;
+  opacity:.9;
+}
+.tile-badge{
+  display:inline-block;
+  background:rgba(245,197,24,.15);
+  border:1px solid rgba(245,197,24,.3);
+  border-radius:6px;
+  padding:3px 10px;
+  font-size:.67em;
+  font-weight:700;
+  color:rgba(245,197,24,.85);
+  letter-spacing:.5px;
+  margin-bottom:10px;
+}
+.tile-title{
+  font-size:1.25em;
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:6px;
+}
+.tile-desc{
+  font-size:.75em;
+  color:rgba(255,255,255,.45);
+  line-height:1.55;
+  margin-bottom:16px;
+}
+.tile-arrow{
+  font-size:1.2em;
+  color:rgba(245,197,24,.5);
+  transition:transform .22s;
+  display:block;
+}
+
+/* ── Alt bilgi ── */
+.land-footer{display:none;}
+
+@media(max-width:520px){
+  .land-tiles{grid-template-columns:1fr;padding:16px 16px 0;}
+  .land-tile{min-height:180px;}
+  .land-header h2{font-size:1.55em;}
+}
+
+/* Section pill — bölüm ayırıcı */
+/* ── BÖLÜM AYIRAÇ (Sınav kâğıdı — chapter header) ── */
+.sec-pill{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:#fff;
+  border:none;
+  border-left:6px solid var(--mor);
+  border-top:2px solid #ede9fe;
+  padding:14px 20px;
+  margin:32px 0 10px;
+  font-size:.85em;
+  font-weight:800;
+  color:var(--mor-koyu);
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  border-radius:0 10px 10px 0;
+  box-shadow:2px 0 0 0 var(--altin) inset,-2px 0 0 0 var(--altin) inset;
+  box-shadow:inset 4px 0 0 var(--altin);
+  position:relative;
+  overflow:hidden;
+}
+.sec-pill::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:linear-gradient(180deg,var(--altin),var(--mor3));
+}
+.sec-pill .sp-num{
+  background:var(--mor);
+  color:#fff;
+  font-size:.75em;
+  padding:2px 9px;
+  border-radius:10px;
+  flex-shrink:0;
+}
+
+/* ── SORU KARTLARI ── */
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+@keyframes corPop{0%{transform:scale(1);}40%{transform:scale(1.03);}100%{transform:scale(1);}}
+@keyframes shakeX{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-5px);}40%,80%{transform:translateX(5px);}}
+
+.q-card{
+  background:#052e1c;
+  border-radius:14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.3);
+  overflow:hidden;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,.07);
+  transition:box-shadow .22s,transform .22s;
+  animation:fadeIn .3s ease both;
+}
+.q-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.4);transform:translateY(-1px);}
+.q-card.answered{border-color:rgba(16,185,129,.3);}
+
+.q-head{
+  background:#063d25;
+  padding:16px 18px 14px;
+  display:flex;align-items:flex-start;gap:14px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.q-num{
+  background:#10b981;
+  color:#fff;
+  font-weight:900;
+  font-size:.8em;
+  width:32px;height:32px;
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  letter-spacing:0;
+}
+.q-txt{
+  color:#d1fae5;
+  font-size:.95em;
+  font-weight:700;
+  line-height:1.55;
+  padding-top:4px;
+}
+
+/* Seçenekler */
+.opts{padding:12px 18px 14px;display:flex;flex-direction:column;gap:7px;background:#041f14;}
+
+.opt{
+  background:#052e1c;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  padding:11px 16px;
+  text-align:left;
+  font-size:.9em;
+  cursor:pointer;
+  display:flex;align-items:center;gap:12px;
+  font-family:inherit;
+  color:#a7f3d0;
+  line-height:1.45;
+  transition:all .2s;
+  position:relative;
+  overflow:hidden;
+}
+.opt::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:transparent;
+  transition:background .2s;
+}
+.opt:hover:not(:disabled){
+  background:#063d25;
+  border-color:#10b981;
+  transform:translateX(4px);
+}
+.opt:hover:not(:disabled)::before{background:#10b981;}
+
+.opt .ol{
+  width:30px;height:30px;
+  border-radius:8px;
+  background:rgba(16,185,129,.15);
+  border:1px solid rgba(16,185,129,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:.82em;
+  flex-shrink:0;
+  transition:all .2s;
+  color:#6ee7b7;
+}
+.opt:hover:not(:disabled) .ol{background:#10b981;border-color:#10b981;color:#fff;}
+
+/* Doğru */
+.opt.cor{
+  background:#f0fdf4;border-color:#4ade80;color:#14532d;
+  animation:corPop .38s ease;
+}
+.opt.cor::before{background:#22c55e;}
+.opt.cor .ol{background:#16a34a;border-color:#16a34a;color:#fff;}
+
+/* Yanlış seçilen */
+.opt.wrn{
+  background:#fff1f2;border-color:#fb7185;color:#881337;
+  animation:shakeX .38s ease;
+}
+.opt.wrn::before{background:#f43f5e;}
+.opt.wrn .ol{background:#e11d48;border-color:#e11d48;color:#fff;}
+
+.opt:disabled{cursor:not-allowed;opacity:.85;}
+
+/* Açıklama kutusu */
+.exp{
+  margin:4px 18px 16px;
+  padding:13px 16px;
+  border-radius:10px;
+  font-size:.86em;
+  line-height:1.65;
+  border-left:4px solid;
+  animation:fadeIn .35s ease;
+  position:relative;
+}
+.exp::before{
+  content:'📋';
+  margin-right:6px;
+  font-size:1em;
+}
+.exp.ce{background:#f0fdf4;border-color:#4ade80;color:#14532d;}
+.exp.ce::before{content:'✅';}
+.exp.we{background:#fff1f2;border-color:#fb7185;color:#881337;}
+.exp.we::before{content:'❌';}
+
+/* ── SONUÇ EKRANI ── */
+@keyframes resultIn{from{opacity:0;transform:scale(.94);}to{opacity:1;transform:scale(1);}}
+
+.res-card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 12px 48px rgba(91,14,175,.22),0 4px 12px rgba(0,0,0,.08);
+  overflow:hidden;
+  margin:24px 0 48px;
+  animation:resultIn .45s cubic-bezier(.34,1.56,.64,1) both;
+}
+.res-hd{
+  background:linear-gradient(135deg,var(--mor-koyu) 0%,var(--mor) 60%,var(--mor2) 100%);
+  color:#fff;
+  text-align:center;
+  padding:40px 20px 28px;
+  border-bottom:5px solid var(--altin);
+  position:relative;
+  overflow:hidden;
+}
+.res-hd::before{
+  content:'';
+  position:absolute;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:rgba(255,255,255,.05);
+  top:-80px;right:-80px;
+  pointer-events:none;
+}
+.res-emoji{font-size:4em;display:block;margin-bottom:10px;}
+.res-big{font-size:3.5em;font-weight:900;color:var(--altin);line-height:1;letter-spacing:-1px;}
+.res-total{font-size:.85em;opacity:.8;margin-top:4px;}
+.res-grade{
+  display:inline-block;
+  margin-top:14px;
+  background:rgba(245,197,24,.2);
+  border:1.5px solid var(--altin);
+  padding:6px 20px;
+  border-radius:20px;
+  font-size:.92em;
+  font-weight:700;
+}
+
+.res-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid #f3f0ff;}
+.res-box{text-align:center;padding:20px 10px;border-right:1px solid #f3f0ff;}
+.res-box:last-child{border-right:none;}
+.res-n{font-size:2.2em;font-weight:900;line-height:1;}
+.res-n.g{color:#16a34a;}.res-n.r{color:#e11d48;}.res-n.b{color:var(--mor);}
+.res-l{font-size:.72em;color:#888;margin-top:5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+
+.res-bar{padding:18px 24px;border-bottom:1px solid #f3f0ff;}
+.res-bar strong{font-size:.82em;color:#555;letter-spacing:.3px;}
+.bar-bg{background:#f1edff;border-radius:20px;height:22px;overflow:hidden;margin-top:8px;}
+.bar-fill{height:100%;border-radius:20px;display:flex;align-items:center;padding-left:12px;font-size:.76em;font-weight:800;color:#fff;transition:width 1.1s cubic-bezier(.4,0,.2,1);white-space:nowrap;}
+.bar-g{background:linear-gradient(90deg,var(--mor),var(--mor3));}
+.bar-r{background:linear-gradient(90deg,#be123c,#fb7185);}
+
+.brkdn{padding:18px 24px 24px;}
+.brkdn h3{
+  font-size:.85em;font-weight:800;color:var(--mor);
+  margin-bottom:14px;letter-spacing:.5px;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;
+}
+.brkdn h3::after{content:'';flex:1;height:1px;background:#ede9fe;}
+
+.bk-row{display:flex;align-items:center;margin-bottom:10px;gap:10px;font-size:.8em;}
+.bk-nm{width:200px;flex-shrink:0;color:#444;font-weight:600;}
+.bk-bg{flex:1;background:#f1edff;border-radius:20px;height:11px;overflow:hidden;}
+.bk-f{height:100%;border-radius:20px;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
+.bk-f-hi{background:linear-gradient(90deg,#16a34a,#4ade80);}
+.bk-f-mid{background:linear-gradient(90deg,var(--mor),var(--mor3));}
+.bk-f-lo{background:linear-gradient(90deg,#be123c,#fb7185);}
+.bk-sc{width:44px;text-align:right;font-weight:800;color:var(--mor);font-size:.9em;}
+
+.rst-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin:16px auto 24px;
+  padding:14px 44px;
+  background:linear-gradient(135deg,var(--mor-koyu),var(--mor2));
+  color:#fff;border:none;border-radius:40px;
+  font-size:.98em;font-weight:800;cursor:pointer;font-family:inherit;
+  box-shadow:0 6px 22px rgba(91,14,175,.38);
+  transition:all .25s;
+  letter-spacing:.3px;
+}
+.rst-btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(91,14,175,.48);}
+
+/* Footer */
+footer{text-align:center;padding:18px;color:#d4b8ff;font-size:.78em;border-top:3px solid var(--mor3);}
+@media print{body{background:#fff;}.tab-nav{display:none;}#tab-kavramlar{display:block!important;}#tab-quiz{display:none!important;}.bolum{box-shadow:none;border:1px solid #bbb;}.bolum-baslik,thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.bolum-sinif,tbody tr:nth-child(even){-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>☪ DİN KÜLTÜRÜ VE AHLAK BİLGİSİ</h1>
+  <h2>TYT · AYT KAVRAMLARI</h2>
+  <div class="hdr-badges">
+    <span class="hdr-badge">TYT</span>
+    <span class="hdr-badge">AYT</span>
+    <span class="hdr-badge">9–12. SINIF</span>
+    <span class="hdr-badge">MEB TYMM</span>
+  </div>
+  <p>✍️ Hazırlayan: Ayşe Yazıcı</p>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn" id="btn-kav" onclick="showTab('kavramlar')"><span class="tab-icon">📖</span>Kavramlar Sözlüğü</button>
+  <button class="tab-btn" id="btn-quiz" onclick="showTab('quiz')"><span class="tab-icon">✏️</span>Quiz — 70 Soru</button>
+</nav>
+
+<div id="landing">
+
+  <!-- Büyük arka plan filigranı -->
+  <div class="land-bg-icon">☪</div>
+
+  <!-- Üst başlık -->
+  <div class="land-header">
+    <span class="land-eyebrow">MEB TYMM · 9–12. SINIF</span>
+    <h2>Din Kültürü ve Ahlak Bilgisi</h2>
+    <div class="land-tyt-row">
+      <span class="land-tyt-badge">TYT</span>
+      <span class="land-tyt-sep">·</span>
+      <span class="land-tyt-badge">AYT</span>
+      <span class="land-tyt-sep">·</span>
+      <span class="land-tyt-label">Kavramlar &amp; Quiz</span>
+    </div>
+    <span class="land-meta">✍️ Hazırlayan: Ayşe Yazıcı</span>
+  </div>
+
+  <!-- İki seçim paneli -->
+  <div class="land-tiles">
+
+    <button class="land-tile" onclick="showTab('kavramlar')">
+      <span class="tile-icon">📖</span>
+      <span class="tile-badge">20 BÖLÜM · 300+ KAVRAM</span>
+      <div class="tile-title">Kavramlar<br>Sözlüğü</div>
+      <div class="tile-desc">Tüm sınıf düzeyleri · konulara göre sınıflandırılmış</div>
+      <span class="tile-arrow">→</span>
+    </button>
+
+    <button class="land-tile" onclick="showTab('quiz')">
+      <span class="tile-icon">✏️</span>
+      <span class="tile-badge">70 SORU · 5 ŞIK</span>
+      <div class="tile-title">Açıklamalı<br>Quiz</div>
+      <div class="tile-desc">Anlık geri bildirim · bölüm bazlı analiz</div>
+      <span class="tile-arrow">→</span>
+    </button>
+
+  </div>
+
+  <div class="land-footer">Din Kültürü ve Ahlak Bilgisi · MEB TYMM Müfredatı</div>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     KAVRAMLAR SÖZLÜĞÜ
+══════════════════════════════════════ -->
+<div id="tab-kavramlar">
+<div class="kav-container">
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">1</span><span class="btxt">İSLAM'IN TEMEL KAVRAMLARI — İNANÇ VE FITRAT</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 1 · 10. Sınıf Ünite 2</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Tevhit</td><td>Allah'ın bir, eşsiz ve ortaksız olduğuna kalben inanmak. İslam'ın özü ve temelidir; "lâ ilâhe illallah" cümlesiyle ifade edilir.</td></tr>
+    <tr><td>Fıtrat</td><td>Allah'ın insanı yaratılıştan verdiği doğal eğilim ve kabiliyet; İslam'ı tanımaya ve iyiye yönelmeye hazır olan temel doğa. "Her insan fıtrat üzere doğar." (Hadis)</td></tr>
+    <tr><td>İman</td><td>Allah'a, meleklere, kitaplara, peygamberlere, ahirete ve kadere kalp ile inanıp dil ile ikrar etmek. İslam'ın birinci şartıdır.</td></tr>
+    <tr><td>Mükellef</td><td>Dinin emir ve yasaklarıyla yükümlü tutulan; akıl baliğ olmuş ve akıl sağlığı yerinde olan kişi.</td></tr>
+    <tr><td>Marifet</td><td>Allah'ı sıfatları ve isimleri aracılığıyla kalben tanımak; ilahi bilgi ve manevi kavrayış.</td></tr>
+    <tr><td>Hamd</td><td>Allah'a minnettarlık ve övgü sunmak; "Elhamdülillah" ifadesiyle vurgulanan şükür ve tazim.</td></tr>
+    <tr><td>Dua</td><td>Kulun Allah ile birebir iletişim kurma ve dilekte bulunma eylemi. "İbadetlerin özü" olarak tanımlanır.</td></tr>
+    <tr><td>Tövbe</td><td>İşlenen günahtan pişmanlık duyarak Allah'a yönelmek ve bir daha yapmamaya kesin karar vermek.</td></tr>
+    <tr><td>Tevekkül</td><td>Gerekli her türlü çabayı harcadıktan sonra sonucu Allah'a bırakmak; kadere teslimiyetle iş görmek.</td></tr>
+    <tr><td>Takva</td><td>Allah'a derin saygıdan doğan; haramlardan kaçınıp emirlere uymayı içselleştirmiş yüksek dindarlık hâli.</td></tr>
+    <tr><td>Şirk</td><td>Allah'a herhangi bir varlığı ortak koşmak. İslam'a göre bağışlanması en güç olan büyük günahtır.</td></tr>
+    <tr><td>Küfür</td><td>İmanın zıddı; Allah'ı veya dinin temel esaslarını inkâr etmek.</td></tr>
+    <tr><td>Nifak</td><td>Dışarıdan Müslüman görünüp içten inkâr etmek; bu kişiye münafık denir.</td></tr>
+    <tr><td>İstiğfar</td><td>Allah'tan bağışlanma dilemek; "Estağfirullah" diyerek günahı için özür dilemek.</td></tr>
+    <tr><td>Sabır</td><td>Sıkıntı, musibet ve zorluklara şikâyet etmeksizin katlanmak. İmanın göstergesi ve şükürle birlikte ele alınan temel erdemdir.</td></tr>
+    <tr><td>Şükür</td><td>Allah'ın verdiği nimetlere karşı kalp, dil ve davranışla minnettarlık göstermek.</td></tr>
+    <tr><td>Zühd</td><td>Dünyaya aşırı bağlanmamak; ahireti ön planda tutarak sade yaşamak.</td></tr>
+    <tr><td>Tefekkür</td><td>Evren, insan ve yaratılış üzerine derin düşünmek; Allah'ın ayetlerini akıl yürüterek anlamlandırmak.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">2</span><span class="btxt">İMAN ESASLARI VE AHİRET KAVRAMLARI</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 2 · 10. Sınıf Ünite 1</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Ahiret</td><td>Ölümden sonraki hayat; kıyamet, diriliş, hesap, cennet ve cehennemin yaşandığı sonsuz âlem.</td></tr>
+    <tr><td>Melek</td><td>Allah'ın nurdan yarattığı, günah işlemeyen, cinsiyetsiz manevi varlıklar (Cebrail, Mikail, İsrafil, Azrail vb.).</td></tr>
+    <tr><td>Kutsal Kitap</td><td>Allah'ın peygamberlerine vahiy yoluyla gönderdiği ilahi metinlerin genel adı (Kur'an, Tevrat, Zebur, İncil, Suhuf).</td></tr>
+    <tr><td>Kader</td><td>Allah'ın her şeyi ezelden bilip takdir etmesi; olayların önceden ilahi ilimde var olması.</td></tr>
+    <tr><td>Kaza</td><td>Kader kapsamındaki bir olayın zamanı gelince Allah'ın dilemesiyle gerçekleşmesi.</td></tr>
+    <tr><td>Sıfat-ı Subutiyye</td><td>Allah'ın zatında var olan olumlu sıfatlar: Hayat, İlim, İrade, Kudret, Semi', Basar, Kelam, Tekvin.</td></tr>
+    <tr><td>Sıfat-ı Selbiyye</td><td>Allah'ı noksanlıklardan uzak tutan sıfatlar: Kıdem, Beka, Vahdaniyet, Muhalefetün lil-havadis, Kıyam bi-nefsihi, Vücud.</td></tr>
+    <tr><td>Berzah</td><td>Ölümden kıyamete kadar ruhların beklediği ara âlem.</td></tr>
+    <tr><td>Ba's</td><td>Kıyamette ölülerin diriltilmesi.</td></tr>
+    <tr><td>Haşr</td><td>Diriltilen insanların hesap için Allah'ın huzurunda toplanması.</td></tr>
+    <tr><td>Mîzan</td><td>Kıyamette amellerin tartılacağı ilahi terazi.</td></tr>
+    <tr><td>Sırat</td><td>Cehennem üzerindeki köprü; herkesin geçmesi gereken ilahi sınav noktası.</td></tr>
+    <tr><td>Şefaat</td><td>Peygamberlerin ve salih kulların Allah'ın izniyle günahkârlara aracılık etmesi.</td></tr>
+    <tr><td>Levh-i Mahfuz</td><td>Allah'ın olacak her şeyi ezelden kaydettiği korunmuş levha.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">3</span><span class="btxt">ALLAH'I TANIMA — VARLIK, BİLGİ VE DELİL KAVRAMLARI</span></div>
+  <div class="bolum-sinif">10. Sınıf Ünite 1 ve Ünite 2</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Varlık</td><td>Var olan her şeyin genel adı; felsefe ve kelamda Allah'ın varlığını ispat tartışmalarının temel kavramı.</td></tr>
+    <tr><td>Akıl</td><td>İnsanı diğer varlıklardan ayıran; doğru ile yanlışı, iyi ile kötüyü ayırt etme yeteneği. İslam'da dini yükümlülüğün ön şartı.</td></tr>
+    <tr><td>Bilgi</td><td>Gerçeğe ulaşmak için duyular, akıl ve vahiy yoluyla edinilen kesin ya da güvenilir veriler.</td></tr>
+    <tr><td>Gayb</td><td>İnsan aklı ve duyularıyla doğrudan bilinemeyen; yalnızca Allah'ın bildiği ya da peygamberlere bildirdiği gizli alan.</td></tr>
+    <tr><td>Mütevatir</td><td>Yalan üzerinde birleşmeleri mümkün olmayan büyük bir kitlenin aktardığı bilgi veya haber; kesin bilgi kaynağı sayılır.</td></tr>
+    <tr><td>Sadık Haber</td><td>Doğruluğuna güvenilen kaynak tarafından verilen; güvenilir ve doğrulanabilir bilgi.</td></tr>
+    <tr><td>Şehadet</td><td>Duyu ve gözlem yoluyla edinilen; somut ve deneyimlenebilir bilgi alanı.</td></tr>
+    <tr><td>Delil</td><td>Allah'ın varlığını ve birliğini kanıtlamaya yarayan akli, naklî veya ampirik kanıt.</td></tr>
+    <tr><td>Gaye</td><td>Yaratılışın amacı; evren ve insan hayatındaki ilahi hikmet ve hedef. Gaye delili Allah'ın varlığını destekler.</td></tr>
+    <tr><td>Nizam</td><td>Evrendeki mükemmel düzen ve uyum. Kozmolojik delillerin temelini oluşturur.</td></tr>
+    <tr><td>Teleoloji</td><td>Evrende var olan amaçlılık ve tasarımı esas alarak Allah'ın varlığını ispat etmeye çalışan felsefi yaklaşım.</td></tr>
+    <tr><td>Marifetullah</td><td>Allah'ı isimleri, sıfatları ve fiilleri aracılığıyla tanıma; O'nu hakkıyla bilme çabası.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">4</span><span class="btxt">VAHİY, KUR'AN VE MUSHAF KAVRAMLARI</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 2 · 11. Sınıf Ünite 1 · 12. Sınıf Ünite 1</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Vahiy</td><td>Allah'ın elçi olarak seçtiği peygamberlere ilettiği ilahi bilgi ve mesaj; Cebrail aracılığıyla ya da doğrudan gönderilir.</td></tr>
+    <tr><td>Nüzul</td><td>Kur'an'ın Allah tarafından Hz. Muhammed'e indirilme süreci; 23 yılda tamamlanmıştır.</td></tr>
+    <tr><td>Mushaf</td><td>Kur'an-ı Kerim'in yazılıp bir araya getirilmiş kitap formu. Hz. Osman döneminde standart hâle getirilmiştir.</td></tr>
+    <tr><td>Sure</td><td>Kur'an'ın 114 bölümünden her biri; en kısası Kevser (3 ayet), en uzunu Bakara (286 ayet).</td></tr>
+    <tr><td>Ayet</td><td>Sure içindeki her bir cümle veya bölüm. Kur'an'da yaklaşık 6236 ayet vardır.</td></tr>
+    <tr><td>Cüz</td><td>Kur'an'ın 30 eşit bölümünden her biri.</td></tr>
+    <tr><td>Hizb</td><td>Her cüzün iki eşit yarısından biri; Kur'an 60 hizbe bölünmüştür.</td></tr>
+    <tr><td>Mekkî Sure</td><td>Hicretten önce Mekke'de inen sureler; tevhid, ahiret ve ahlak konularını işler.</td></tr>
+    <tr><td>Medenî Sure</td><td>Hicretten sonra Medine'de inen sureler; ibadet, hukuk ve toplumsal düzeni işler.</td></tr>
+    <tr><td>Esbab-ı Nüzul</td><td>Ayetlerin inmesine sebep olan olay ya da sorular; bir ayetin doğru anlaşılması için indiği bağlamı gösteren rivayetler. 11. sınıf temel konusu.</td></tr>
+    <tr><td>İ'caz</td><td>Kur'an'ın mucizevi oluş özelliği; hiçbir insanın benzerini getiremeyeceğini ifade eden ilahi belge. Dil, bilgi ve evrensellik boyutlarıyla ele alınır. 11. sınıf temel konusu.</td></tr>
+    <tr><td>Tefsir</td><td>Kur'an ayetlerini dilbilgisi, bağlam ve rivayetler çerçevesinde açıklama ilmi.</td></tr>
+    <tr><td>Rivayet Tefsiri</td><td>Hadisler, sahabe sözleri ve tarihî rivayetlere dayanarak yapılan tefsir yöntemi. 11. sınıf konusu.</td></tr>
+    <tr><td>Dirayet Tefsiri</td><td>Akıl, dil kuralları ve çeşitli ilim dallarına dayanarak yapılan tefsir yöntemi. 11. sınıf konusu.</td></tr>
+    <tr><td>Meal</td><td>Kur'an'ın başka dillere yapılan yaklaşık anlam çevirisi; tam tercüme değil, anlam aktarımıdır.</td></tr>
+    <tr><td>Tercüme (Harfî)</td><td>Kur'an'ın kelime kelime, yapısal bütünlük korunmaya çalışılarak yapılan çevirisi; dil farklılıkları nedeniyle tam aktarım mümkün değildir.</td></tr>
+    <tr><td>Tecvid</td><td>Kur'an'ı harf ve mahreçlerine uygun biçimde okuma kuralları ilmi.</td></tr>
+    <tr><td>Tilavet</td><td>Kur'an'ı usulüne ve tecvid kurallarına uygun biçimde, manasını düşünerek okuma.</td></tr>
+    <tr><td>Kıraat</td><td>Kur'an'ın Hz. Peygamber'den rivayet edilen farklı okuyuş biçimleri; yedi veya on kıraat imamı meşhurdur.</td></tr>
+    <tr><td>Besmele</td><td>"Bismillahirrahmanirrahim" ifadesi; Neml suresi 30. ayette geçen; her surenin (Tevbe hariç) başında yer alan ilahi söz.</td></tr>
+    <tr><td>Fatiha / Seb'ul Mesani</td><td>Kur'an'ın ilk suresi; "yedi tekrarlanan" anlamında Seb'ul Mesani de denir (Hicr 15/87). Namazda her rekâtta okunur.</td></tr>
+    <tr><td>Huruf-u Mukattaa</td><td>Elif-Lam-Mim, Ya-Sin, Ha-Mim gibi bazı surelerin başında yer alan; kesin anlamları bilinmeyen kesik harfler. 11. sınıf konusu.</td></tr>
+    <tr><td>Muhkem</td><td>Anlamı açık, net ve yoruma kapalı ayetler; uyulması gereken temel hükümler içerir.</td></tr>
+    <tr><td>Müteşabih</td><td>Anlamı kapalı, yoruma ve tevile muhtaç ayetler; derin ilim gerektirir.</td></tr>
+    <tr><td>Mücmel</td><td>Kısa ve özlü ifadeli; açıklamaya muhtaç olan ayetler. Sünnetle mübeyyen hâle gelir.</td></tr>
+    <tr><td>Müşkil</td><td>Anlam itibariyle birden fazla ihtimali olan; zâhiri birbiriyle çelişiyor gibi görünen ayetler.</td></tr>
+    <tr><td>Nasih</td><td>Önceki bir hükmü kaldıran ayet.</td></tr>
+    <tr><td>Mensuh</td><td>Hükmü sonraki bir ayet tarafından kaldırılmış ayet. 11. sınıf konusu.</td></tr>
+    <tr><td>Nesh</td><td>Daha sonra inen bir ayetin önceki ayetin hükmünü kaldırması; yalnızca hukukî hükümler için geçerlidir.</td></tr>
+    <tr><td>Suhuf</td><td>Hz. İbrahim ve Hz. Musa gibi bazı peygamberlere verilen sayfalar hâlindeki vahiyler. Kur'an'ın önceki kutsal metinlere atıfta bulunduğu kavram.</td></tr>
+    <tr><td>Hafız</td><td>Kur'an'ı tümüyle ezberlemiş kişi.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">5</span><span class="btxt">PEYGAMBERLİK VE HZ. MUHAMMED (S.A.V.)</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 5 · Siyer ve Hadis Üniteleri</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Peygamber</td><td>Allah tarafından insanlara elçi olarak seçilen; vahiy alan ve dini tebliğ eden kişi. Genel adı "nebi" veya "resul"dür.</td></tr>
+    <tr><td>Nübüvvet</td><td>Peygamberlik kurumu ve makamı; Allah'ın vahiy yoluyla elçilerine bilgi iletmesi.</td></tr>
+    <tr><td>Hatemülenbiya</td><td>"Peygamberlerin sonuncusu" anlamında Hz. Muhammed'in unvanı; ondan sonra peygamber gelmeyeceğini ifade eder.</td></tr>
+    <tr><td>Tebliğ</td><td>Allah'ın mesajını insanlara eksiksiz ulaştırmak; peygamberin temel görevi.</td></tr>
+    <tr><td>Tebyin</td><td>Kur'an'ın kapalı veya genel hükümlerini açıklama görevi; Hz. Peygamber'in sünnetle yerine getirdiği rol.</td></tr>
+    <tr><td>Temsil</td><td>Hz. Peygamber'in Kur'an ahlakını hayatıyla somutlaştırması; canlı örnek olması.</td></tr>
+    <tr><td>Üsve-i Hasene</td><td>"En güzel örnek" demektir. Kur'an'ın Hz. Peygamber için kullandığı ifade (Ahzab 33/21).</td></tr>
+    <tr><td>Hadis</td><td>Hz. Peygamber'in söz, davranış ve onaylarının sonraki nesillere aktarılmış yazılı kaydı.</td></tr>
+    <tr><td>Sünnet</td><td>Hz. Peygamber'in hayatını ve uygulamalarını kapsayan; ibadet, ahlak ve hukuk için bağlayıcı örnek davranış bütünü.</td></tr>
+    <tr><td>İsnad</td><td>Hadisin kimlerden kimlerle aktarıldığını gösteren ravi zinciri.</td></tr>
+    <tr><td>Mütevâtir Hadis</td><td>Yalan üzerinde birleşmeleri mümkün olmayan büyük bir kalabalığın aktardığı; kesin bilgi ifade eden hadis.</td></tr>
+    <tr><td>Siyer</td><td>Hz. Peygamber'in hayatını, kişiliğini ve yaşadığı olayları inceleyen bilim dalı.</td></tr>
+    <tr><td>Ehl-i Beyt</td><td>Hz. Peygamber'in ev halkı; eşleri, kızı Hz. Fatıma, damadı Hz. Ali ve torunları.</td></tr>
+    <tr><td>Mucize</td><td>Peygamberlerin Allah'ın izniyle gösterdikleri; doğa yasalarını aşan olağanüstü olay.</td></tr>
+    <tr><td>Hicret</td><td>622'de Hz. Peygamber ve Müslümanların Mekke'den Medine'ye göç etmesi; İslam takviminin başlangıcıdır.</td></tr>
+    <tr><td>Veda Hutbesi</td><td>Hz. Peygamber'in 632'deki son haccında okuduğu; insan hak ve eşitliğini evrensel ilkelerle ilan eden tarihi hutbe.</td></tr>
+    <tr><td>Ashab (Sahabe)</td><td>Hz. Peygamber'i iman hâlinde görüp Müslüman olarak vefat etmiş kişiler.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">6</span><span class="btxt">İBADETLER, EF'AL-İ MÜKELLEFİN VE FIKHİ HÜKÜM KAVRAMLARI</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 3 · 11. Sınıf Fıkıh Üniteleri · 12. Sınıf Ünite 3</div>
+
+  <!-- Alt başlık 1 -->
+  <div class="sub-kav">⚖️ Ef'al-i Mükellefin — Mükellefin Fiillerinin Dini Hükümlere Göre Sınıflandırılması</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Ef'al-i Mükellefin</td><td>Dinen sorumlu tutulan kişinin (mükellefin) eylemlerini dini açıdan değerlendiren hüküm kategorileri bütünü. Toplam 7 (veya 8) kısma ayrılır: Farz, Vacip, Sünnet, Müstehap, Mübah, Mekruh, Haram (+Müfsid).</td></tr>
+    <tr><td>Mükellef</td><td>Dinin emir ve yasaklarıyla yükümlü tutulan; akıl-baliğ olmuş, akıl sağlığı yerinde Müslüman.</td></tr>
+    <tr><td>Farz</td><td>Kesin ve bağlayıcı delille yapılması emredilen hüküm. Terk edilmesi büyük günahtır. İki türü vardır: Farz-ı Ayn ve Farz-ı Kifaye.</td></tr>
+    <tr><td>Farz-ı Ayn</td><td>Her Müslümana ayrı ayrı farz olan yükümlülük. Örnek: Beş vakit namaz, oruç, zekât, kelime-i şehadet.</td></tr>
+    <tr><td>Farz-ı Kifaye</td><td>Müslümanların bir kısmı yerine getirince diğerlerinden düşen toplumsal farz. Hiç kimse yapmazsa tüm toplum günahkâr olur. Örnek: Cenaze namazı kılmak, ilim öğrenmek.</td></tr>
+    <tr><td>Vacip</td><td>Zannî (kesin olmayan) delille yapılması emredilen hüküm. Terki haram kadar ağır olmamakla birlikte günahtır. Hanefi mezhebine göre farzdan ayrı bir kategoridir. Örnek: Vitir namazı, kurban kesmek.</td></tr>
+    <tr><td>Sünnet</td><td>Hz. Peygamber'in devamlı yaptığı; terk edilmesini hoş karşılamadığı ibadet ve davranışlar. İki türü vardır: Sünnet-i Müekkede ve Sünnet-i Gayr-i Müekkede.</td></tr>
+    <tr><td>Sünnet-i Müekkede</td><td>Hz. Peygamber'in çok nadiren terk ettiği, devamlı uyguladığı sünnet. Mazeretsiz terk edilmesi kınanır. Örnek: Sabah, öğle ve akşam namazlarının sünneti, Ramazan teravihi.</td></tr>
+    <tr><td>Sünnet-i Gayr-i Müekkede</td><td>Hz. Peygamber'in bazen yapıp bazen terk ettiği sünnet. Terk edilmesi kınanmaz. Örnek: İkindi ve yatsı namazının öncesi nafile rekâtları.</td></tr>
+    <tr><td>Müstehap (Mendub / Nafile)</td><td>Yapılması sevap kazandıran; terk edilmesi günah olmayan davranış. Örnek: Nafile namaz, gönüllü oruç.</td></tr>
+    <tr><td>Mübah</td><td>Yapılması da terk edilmesi de dinen eşit olan; ne emredilen ne de yasaklanan eylem. Örnek: Renk seçimi, yenilen yemeğin türü.</td></tr>
+    <tr><td>Mekruh</td><td>Terk edilmesi yapılmasından daha iyi olan eylem. İki türü vardır:</td></tr>
+    <tr><td>Tahrimen Mekruh</td><td>Harama çok yakın; kesin olmayan delille yasaklanan eylem. Terk edilmesi vaciptir. Örnek: Namazda gereksiz hareket etmek.</td></tr>
+    <tr><td>Tenzihen Mekruh</td><td>Haramdan uzak; dinen hoş görülmeyen ama yasaklanmayan eylem. Örnek: Sağ el ile değil sol elle yemek yemek.</td></tr>
+    <tr><td>Haram</td><td>Kesin delille yasaklanmış; yapılması büyük günahtır ve kişi için ceza gerektirir. Örnek: Faiz, içki, zina.</td></tr>
+    <tr><td>Müfsid</td><td>Başlamış olan bir ibadeti bozan ve geçersiz kılan durum veya eylem. Örnek: Namazda konuşmak, oruçta yemek.</td></tr>
+    <tr><td>Azimet</td><td>Olağan koşullarda geçerli olan asıl hüküm. Mazeret veya zorunluluk söz konusu olmaksızın uyulması gereken kural.</td></tr>
+    <tr><td>Ruhsat</td><td>Zorunlu hâl ve mazeret durumunda geçici olarak uygulanan kolaylaştırılmış hüküm. Örnek: Hasta için oturarak namaz kılmak, yolcu için orucu ertelemek.</td></tr>
+  </tbody></table>
+
+  <!-- Alt başlık 2 -->
+  <div class="sub-kav">🕌 İbadet Kavramları — Şart, Rükün ve Temel Yükümlülükler</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>İbadet</td><td>Yalnızca Allah'a yönelik; O'nun rızasını kazanmak amacıyla yapılan her türlü söz, eylem ve niyet.</td></tr>
+    <tr><td>Şart</td><td>İbadetin geçerli olabilmesi için önceden yerine getirilmesi gereken dış koşul. Örnek: Namazın şartları arasında abdest ve kıble.</td></tr>
+    <tr><td>Rükün</td><td>İbadetin ayrılmaz parçası; terk edilmesi hâlinde ibadet geçersiz sayılır. Örnek: Namazda kıyam, rükû, secde.</td></tr>
+    <tr><td>Niyet</td><td>İbadetin geçerli olması için zorunlu olan; kalpten yapılan irade kararı.</td></tr>
+    <tr><td>İhlas</td><td>İbadeti yalnızca Allah rızası için, gösteriş ve dünya kaygısından uzak yapmak.</td></tr>
+    <tr><td>İhsan</td><td>Allah'ı görüyor gibi ibadet etmek; dini en eksiksiz ve güzel biçimde yaşamak.</td></tr>
+    <tr><td>Helal</td><td>Dinen serbest bırakılmış; yapılmasında dini açıdan sakınca olmayan şey.</td></tr>
+    <tr><td>Namaz</td><td>Günde beş vakit kılınan; İslam'ın ikinci şartı olan farz ibadet.</td></tr>
+    <tr><td>Oruç</td><td>Ramazan ayında imsak vaktinden iftara kadar yeme, içme ve cinsel ilişkiden kaçınmak; İslam'ın dördüncü şartı.</td></tr>
+    <tr><td>Zekât</td><td>Nisap miktarına ulaşan malın kırkta birini (%2,5) ihtiyaç sahiplerine vermek; İslam'ın üçüncü şartı.</td></tr>
+    <tr><td>Hac</td><td>İstitaat sahibi Müslümanların ömürde bir kez Mekke'yi ziyaret edip belirli ibadetleri eda etmesi; İslam'ın beşinci şartı.</td></tr>
+    <tr><td>Bid'at</td><td>Dinde sonradan icat edilmiş; Hz. Peygamber ve sahabeden bilinmeyen uygulama.</td></tr>
+    <tr><td>Hurafe</td><td>Dini temeli olmayan, uydurma inanış ve uygulamalar; batıl inanç.</td></tr>
+  </tbody></table>
+
+  <!-- Alt başlık 3 -->
+  <div class="sub-kav">📚 İslam Hukukunun Kaynakları ve Yöntemi</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>İcma</td><td>Bir dönemdeki müçtehitlerin dini mesele üzerinde fikir birliğine varması; İslam hukukunun üçüncü kaynağı.</td></tr>
+    <tr><td>Kıyas</td><td>Hakkında nas bulunmayan meselenin, ortak illet (sebep) nedeniyle hükmü bilinen bir meseleyle karşılaştırılarak çözülmesi; İslam hukukunun dördüncü kaynağı.</td></tr>
+    <tr><td>İçtihat</td><td>Nitelikli İslam âliminin Kur'an ve Sünnet'ten hüküm çıkarma çabası ve yöntemi.</td></tr>
+    <tr><td>Fetva</td><td>Yetkili bir din âliminin (müftü) dini konularda verdiği resmi görüş.</td></tr>
+    <tr><td>Kul Hakkı</td><td>Başkasına verilen zarar veya haksızlık; yalnızca hak sahibinin affıyla giderilebilir.</td></tr>
+    <tr><td>Zarurât-ı Hamse</td><td>Dinin koruma altına aldığı beş temel maslahat: canın, aklın, neslin, malın ve dinin korunması.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">7</span><span class="btxt">AHLAK — TEMEL İLKELER VE UNSURLAR</span></div>
+  <div class="bolum-sinif">9. Sınıf Ünite 4</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Ahlak</td><td>İnsanın iyi ya da kötü olarak nitelendirilen huy ve davranış özelliklerinin bütünü.</td></tr>
+    <tr><td>Vicdan</td><td>Kişinin kendi eylemlerini içten yargıladığı; doğru ve yanlışı hissettiren iç ses.</td></tr>
+    <tr><td>Adalet</td><td>Dört temel erdemden biri. Herkese hakkını vermek; doğruluk, denge ve tarafsızlık ilkesi.</td></tr>
+    <tr><td>Şecaat</td><td>Dört temel erdemden biri. Cesaret ve yiğitlik; hakkı savunmaktan çekinmemek.</td></tr>
+    <tr><td>İffet</td><td>Dört temel erdemden biri. Nefse hâkim olmak; arzu ve tutkuları meşru sınırlar içinde tutmak.</td></tr>
+    <tr><td>Hikmet</td><td>Dört temel erdemden biri. Bilgelik; durumu doğru okuyup yerinde karar verme yeteneği.</td></tr>
+    <tr><td>İtidal</td><td>Duygu, düşünce ve davranışlarda denge ve ölçülülük. Dört temel erdemi birbirine bağlayan orta yol ilkesi.</td></tr>
+    <tr><td>Tevazu</td><td>Alçakgönüllülük; bilgi, mal veya makamı başkalarına karşı üstünlük aracına dönüştürmemek.</td></tr>
+    <tr><td>Ahilik</td><td>Orta Asya ve Anadolu'da gelişen; dürüstlük, vefa, cömertlik ve dayanışmayı esas alan esnaf-zanaatkâr ahlak teşkilatı.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">8</span><span class="btxt">ERDEMLİ DAVRANIŞLAR VE AİLE DEĞERLERİ</span></div>
+  <div class="bolum-sinif">9–10. Sınıf Ahlak Üniteleri · 12. Sınıf Ünite 2</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Dürüstlük (Sıdk)</td><td>Söz, davranış ve niyette doğruluk; güvenilir ve tutarlı olmak.</td></tr>
+    <tr><td>Emanet</td><td>Güvenilirlik; kendisine bırakılan değerlere, görevlere ve sırlara sadakatle yaklaşmak.</td></tr>
+    <tr><td>Liyakat</td><td>Bir göreve ya da makama gerçekten layık olmak; ehliyet ve yetkinliğe göre sorumluluk üstlenmek.</td></tr>
+    <tr><td>Vefa</td><td>Verilen söze, yapılan ahde ve sevgi bağına sonuna kadar sadık kalmak.</td></tr>
+    <tr><td>Sadakat</td><td>Kişiye, göreve veya değere bağlılıkta devamlılık; ihanet etmemek, yanında olmak.</td></tr>
+    <tr><td>Fedakârlık</td><td>Başkasının iyiliği için kendi çıkar ve konforundan vazgeçmek; özveri.</td></tr>
+    <tr><td>Merhamet</td><td>Başkasının acısını içten hissetmek ve gidermeye çalışmak.</td></tr>
+    <tr><td>Haya</td><td>Allah'a ve insanlara karşı utanma duygusu; kötülükten alıkoyan ahlaki değer. "Haya imandan bir şubedir." (Hadis)</td></tr>
+    <tr><td>Kanaat</td><td>Sahip olunanla yetinmek; sonsuz tüketim döngüsünden uzak durmak.</td></tr>
+    <tr><td>Cömertlik (Sehâ)</td><td>Malı ve imkânı Allah rızası için gönüllü paylaşmak; cimriliğin karşıtı erdem.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">9</span><span class="btxt">KAÇINILMASI GEREKEN DAVRANIŞLAR — KÖTÜ HUYLAR</span></div>
+  <div class="bolum-sinif">9–10. Sınıf Ahlak Üniteleri</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Kibir</td><td>Kendini üstün görüp başkalarını küçümsemek. İslam'ın en şiddetle kınadığı nefis hastalığı.</td></tr>
+    <tr><td>Ucub</td><td>Kendi iyilik ve başarılarını beğenmek; kendini yeterli saymak. Kibrin kapısı olarak değerlendirilir.</td></tr>
+    <tr><td>Riya</td><td>İbadeti ve iyilikleri Allah rızası için değil, insanların takdirini kazanmak için yapmak; "gizli şirk" olarak nitelendirilir.</td></tr>
+    <tr><td>Haset</td><td>Başkasındaki nimetin yok olmasını istemek; kul hakkını da ihlal ettiğinden imana aykırı sayılır.</td></tr>
+    <tr><td>Gıybet</td><td>Bir kişiyi yokluğunda, hoşlanmayacağı şekilde anlatmak. Kur'an'da ölü kardeşinin etini yemekle eşdeğer tutulur (Hucurat 49/12).</td></tr>
+    <tr><td>Nemime (Koğuculuk)</td><td>İnsanlar arasında bozgunculuk yaratmak amacıyla söz taşımak; fitne çıkarmak.</td></tr>
+    <tr><td>İftira</td><td>Bir kişiye yapmadığı bir şeyi isnat etmek; hem büyük günah hem kul hakkı ihlali.</td></tr>
+    <tr><td>Yalan</td><td>Bilerek gerçeğe aykırı söz söylemek. Münafıklığın başlıca alametlerinden biridir.</td></tr>
+    <tr><td>Israf</td><td>Gereksiz harcama ve savurganlık. "Müsrifler şeytanın kardeşidir." (İsra 17/27)</td></tr>
+    <tr><td>Zulüm</td><td>Haksızlık etmek, başkasının hakkını çiğnemek. Allah'ın haram kıldığı temel yasaklardan biridir.</td></tr>
+    <tr><td>Kin</td><td>Birine karşı uzun süre beslenen gizli öfke ve düşmanlık duygusu.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">10</span><span class="btxt">KADER, İRADE, ÖZGÜRLÜK VE SORUMLULUK</span></div>
+  <div class="bolum-sinif">11. Sınıf Ünite 1</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Kader</td><td>Allah'ın sonsuz ilmiyle her şeyi ezelden bilip belirlemesi; ilahi takdir.</td></tr>
+    <tr><td>Kaza</td><td>Kader kapsamındaki olayın zamanı gelince gerçekleşmesi; ilahi takdirin hayata geçmesi.</td></tr>
+    <tr><td>İrade</td><td>İnsanın kendi eylemlerini seçme ve yönlendirme kapasitesi; özgür irade. İslam kelamında "cüz'i irade" olarak da anılır.</td></tr>
+    <tr><td>Özgürlük</td><td>Baskı ve zorlama olmaksızın kendi seçimlerine göre karar verme hâli. İslam'da sorumlulukla birlikte değerlendirilir.</td></tr>
+    <tr><td>Sorumluluk</td><td>Kişinin özgür iradesiyle yaptığı eylemlerden hesap verebilir olması. Ahiret hesabının ahlaki temeli.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">11</span><span class="btxt">İSLAM DÜŞÜNCESİ VE İLİM GELENEĞİ</span></div>
+  <div class="bolum-sinif">11. Sınıf Ünite 2</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>İlim</td><td>Gerçeği doğru yöntemle araştırarak elde edilen bilgi. İslam, ilim öğrenmeyi farz saymıştır.</td></tr>
+    <tr><td>Âlim</td><td>İslam ilimlerinde derin bilgi sahibi olan, fetva verebilecek nitelikte uzman kişi.</td></tr>
+    <tr><td>Medrese</td><td>Ortaçağ İslam dünyasında yüksek öğretim ve araştırma kurumu.</td></tr>
+    <tr><td>Beytülhikme</td><td>Abbasi döneminde (9. yy) Bağdat'ta kurulan; tercüme hareketinin merkezi olan büyük ilim ve kütüphane kurumu.</td></tr>
+    <tr><td>Darülhadis</td><td>Hadis ilminin öğretildiği özel eğitim kurumu.</td></tr>
+    <tr><td>Darülkurra</td><td>Kur'an tilavetin ve kıraat ilminin öğretildiği özel eğitim kurumu.</td></tr>
+    <tr><td>Rasathane</td><td>Astronomi gözlemlerinin yapıldığı bilimsel yapı. İslam altın çağında Bağdat, Kahire ve İstanbul'da kurulmuştur.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">12</span><span class="btxt">ANADOLU'DA İSLAM — TÜRK-İSLAM GELENEĞİ</span></div>
+  <div class="bolum-sinif">10. Sınıf Ünite 4 · 11. Sınıf Ünite 2–3</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Anadolu'da İslamiyet</td><td>Türklerin Müslümanlığı 10. yüzyıldan itibaren benimseyip Anadolu'ya taşıması; Selçuklu ve Osmanlı dönemlerinde özgün bir Türk-İslam medeniyetinin oluşması.</td></tr>
+    <tr><td>Selçuklular ve İslam</td><td>Büyük Selçuklu ve Anadolu Selçuklu devletlerinin İslam'ı devlet dini olarak benimsemesi; medrese, cami ve kervansaraylarla İslami kurumları Anadolu'ya yerleştirmesi.</td></tr>
+    <tr><td>Osmanlı'da Din Teşkilatı</td><td>Osmanlı Devleti'nde Şeyhülislamlık kurumu aracılığıyla dini işlerin yönetilmesi; kadılık, müftülük ve vakıf sisteminin oluşturulması.</td></tr>
+    <tr><td>Diyanet İşleri Başkanlığı</td><td>1924'te kurulan; Türkiye'de İslami hizmetleri (namaz, hutbe, fetvâ, din eğitimi) yürüten devlet kurumu.</td></tr>
+    <tr><td>Türk-İslam Sentezi</td><td>Türk kültür geleneği ile İslam medeniyetinin Anadolu'da özgün biçimde bütünleşmesi; edebiyat, mimari, musiki ve tasavvuf alanındaki bu sentezin ürünleri.</td></tr>
+    <tr><td>Vakıf</td><td>Mülkünü ve gelirini toplumun yararına sonsuza kadar tahsis etmek amacıyla kurulan dini-sosyal kurum. Osmanlı'da hastane, medrese, köprü ve imaretler vakıf eliyle inşa edilmiştir.</td></tr>
+    <tr><td>Medrese</td><td>İslam dünyasının klasik yükseköğretim kurumu. Anadolu Selçuklu ve Osmanlı döneminde teoloji, hukuk, matematik ve tıp alanlarında eğitim vermiştir.</td></tr>
+    <tr><td>Tekke / Dergâh</td><td>Tarikat mensuplarının ibadet, eğitim ve bir arada yaşadığı tasavvuf mekânı. Anadolu'nun manevi hayatının şekillenmesinde kilit rol oynamıştır.</td></tr>
+    <tr><td>Ahilik</td><td>Anadolu'da gelişen; esnaf ve zanaatkârları dürüstlük, vefa ve dayanışma değerleri etrafında örgütleyen İslami ahlak teşkilatı. Kurucusu Ahi Evran'dır.</td></tr>
+    <tr><td>Yunus Emre</td><td>13–14. yüzyıl Anadolu mutasavvıf-şairi. "Yaratılanı severim Yaratan'dan ötürü" anlayışıyla sevgi ve hoşgörüyü Türkçe şiirle Anadolu'ya taşımıştır.</td></tr>
+    <tr><td>Hacı Bektaş Veli</td><td>13. yüzyıl Anadolu ermişi; Bektaşilik tarikatının piri. "Eline, diline, beline sahip ol" öğretisiyle tanınır.</td></tr>
+    <tr><td>Mevlana Celaleddin Rumi</td><td>13. yüzyıl Konya mutasavvıfı ve Mevleviliğin kurucusu. Mesnevi adlı eseriyle evrensel sevgi ve hoşgörü mesajını dünyaya yayan Anadolu'nun büyük düşünürü.</td></tr>
+    <tr><td>Hacı Bayram Veli</td><td>14–15. yüzyıl Ankara'sında yaşayan; Bayramilik tarikatının kurucusu Anadolu ermişi. Hem manevi hem toplumsal birliği vurgulamıştır.</td></tr>
+    <tr><td>Türk Dini Musikisi</td><td>İlahi, mevlit, mersiye, kaside ve tekke musikisi gibi geleneklerden oluşan; Anadolu'da İslam'ın duygu ve estetik boyutunu dile getiren özgün müzik geleneği.</td></tr>
+    <tr><td>Cami Mimarisi</td><td>Anadolu'da Selçuklu taç kapılarından Osmanlı külliye geleneğine uzanan; kubbe, minare ve çini süslemesiyle özgünleşen İslam mimari geleneği. Sinan'ın eserleri bu geleneğin zirvesidir.</td></tr>
+    <tr><td>Hat Sanatı</td><td>Kur'an harflerini estetik biçimde yazma sanatı. Anadolu'da cami, medrese ve müzelerde yaşayan; İslam görsel sanatlarının temel dalı.</td></tr>
+    <tr><td>Tezhip</td><td>Kur'an ve dini kitapların sayfalarını altın varak ve renkli boyalarla süsleme sanatı; Osmanlı döneminin en özgün el sanatlarından biri.</td></tr>
+    <tr><td>Mevlit</td><td>Hz. Muhammed'in doğumunu anlatan; Süleyman Çelebi tarafından 1409'da kaleme alınan dini şiir. Türk-İslam geleneğinde doğum, ölüm ve önemli günlerde okunur.</td></tr>
+    <tr><td>Külliye</td><td>Osmanlı döneminde cami merkezli; medrese, imaret, hamam, kütüphane ve hastaneden oluşan kapsamlı dini-sosyal yapı topluluğu.</td></tr>
+    <tr><td>Osmanlı'da Hoşgörü</td><td>Osmanlı Devleti'nin yönetimi altındaki Hristiyan ve Yahudi toplulukların kendi din ve kültürlerini yaşatmasına olanak tanıyan millet sistemi anlayışı.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">13</span><span class="btxt">FIKIH, İCTİHAD VE MEZHEPLER</span></div>
+  <div class="bolum-sinif">10. Sınıf Ünite 5 · 12. Sınıf Ünite 3</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Fıkıh</td><td>İslam hukukunu ve ibadet esaslarını; amel konularındaki hükümleri inceleyen bilim dalı.</td></tr>
+    <tr><td>İtikat</td><td>İnanç; kalbin kesinlikle bağlandığı iman esasları. Kelam ilminin konusudur.</td></tr>
+    <tr><td>Mezhep</td><td>Dini konularda sistematik yorum getiren; kurucusunun adıyla anılan hukuk veya itikat okulu.</td></tr>
+    <tr><td>Ehl-i Sünnet</td><td>Hz. Peygamber ve sahabesinin yolunu izleyen; İslam'ın çoğunluk anlayışı (Sünnilik).</td></tr>
+    <tr><td>İctihad</td><td>Nitelikli âlimin Kur'an ve Sünnet'ten yola çıkarak yeni meselelere hüküm çıkarma çabası.</td></tr>
+    <tr><td>Kıyas</td><td>Hakkında açık hüküm bulunmayan meseleyi, benzer hükümlü meseleye kıyaslayarak çözme; dördüncü kaynak.</td></tr>
+    <tr><td>Fetva</td><td>Dini konuda yetkili âlimin verdiği resmi görüş.</td></tr>
+    <tr><td>Kelam</td><td>İslam'ın inanç esaslarını akıl ve nakil yoluyla savunan bilim dalı.</td></tr>
+    <tr><td>Hanefi</td><td>İmam Azam Ebu Hanife'nin kurduğu; Türkler arasında en yaygın Sünni fıkıh mezhebi.</td></tr>
+    <tr><td>Maliki</td><td>İmam Malik'in kurduğu; Kuzey Afrika'da yaygın Sünni fıkıh mezhebi.</td></tr>
+    <tr><td>Şafi</td><td>İmam Şafii'nin kurduğu Sünni fıkıh mezhebi.</td></tr>
+    <tr><td>Hanbeli</td><td>İmam Ahmed b. Hanbel'in kurduğu Sünni fıkıh mezhebi; nakilciliği ön planda tutar.</td></tr>
+    <tr><td>Eş'arilik</td><td>Ebu'l-Hasan el-Eş'ari'nin kurduğu Sünni kelam okulu; Şafii ve Maliki çevrelerinde yaygın.</td></tr>
+    <tr><td>Maturidilik</td><td>İmam Maturidi'nin kurduğu Sünni kelam okulu; Hanefi çevrelerinde yaygın. Akla daha geniş yer verir.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">14</span><span class="btxt">TASAVVUF VE MANEVİ HAYAT KAVRAMLARI</span></div>
+  <div class="bolum-sinif">12. Sınıf Ünite 4</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Tasavvuf</td><td>Nefsi terbiye ederek Allah'a manevi yakınlık kurmayı amaçlayan İslami iç disiplin ve gelenek.</td></tr>
+    <tr><td>İnsân-ı Kâmil</td><td>Tasavvufta maddi ve manevi açıdan olgunlaşmış, Allah'ın ahlakıyla ahlaklanmış "tam insan" ideali.</td></tr>
+    <tr><td>Semah</td><td>Alevilerin ve bazı Sünni tarikatların ayinlerinde icra edilen ritmik dini dans ve törenin adı.</td></tr>
+    <tr><td>Veli</td><td>Allah'a yakın olduğuna inanılan; kerametleriyle tanınan manevi önder. "Evliya" çoğuludur.</td></tr>
+    <tr><td>Tarikat</td><td>Tasavvufi eğitim veren; kendine özgü usul ve adabı bulunan manevi okul.</td></tr>
+    <tr><td>Mürşid / Şeyh</td><td>Tasavvuf yolunda müridi yetiştiren ve yönlendiren manevi rehber.</td></tr>
+    <tr><td>Zikir</td><td>Allah'ı anmak; belirli isimlerin veya duaların tekrarlanmasıyla yapılan manevi pratik.</td></tr>
+    <tr><td>Muhabbet</td><td>Allah'a ve kullarına duyulan derin sevgi; tasavvuf yolunun temel motivasyonu.</td></tr>
+    <tr><td>Mevlana Celaleddin Rumi</td><td>13. yüzyıl Anadolu mutasavvıfı; Mesnevi'nin yazarı ve Mevleviliğin kurucusu.</td></tr>
+    <tr><td>Yunus Emre</td><td>13–14. yüzyıl Türk mutasavvıf şairi; sevgi ve hoşgörü temelli şiirleriyle tanınır.</td></tr>
+    <tr><td>Hacı Bektaş Veli</td><td>13. yüzyıl Türk mutasavvıfı; Bektaşilik tarikatının piri.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">15</span><span class="btxt">ADALET, BARIŞ VE EVRENSEL DEĞERLER</span></div>
+  <div class="bolum-sinif">10. Sınıf Ünite 3 · Çevre ve Teknoloji</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Hak</td><td>Kişiye dinen ve ahlaken tanınan dokunulmaz pay ya da yetki. İslam hukuku ve ahlakının odak kavramı.</td></tr>
+    <tr><td>Cihat</td><td>Geniş anlamıyla Allah yolunda her türlü çabayı harcamak; öncelikle nefisle mücadele, ardından sosyal ve gerektiğinde meşru müdafaa.</td></tr>
+    <tr><td>Emir Bi'l-Ma'ruf</td><td>İyiliği emretmek; toplumda iyiliğin yaygınlaşması için gayret göstermek.</td></tr>
+    <tr><td>Nehiy Ani'l-Münker</td><td>Kötülükten men etmek; toplumda kötülüklerin yayılmasına engel olmak.</td></tr>
+    <tr><td>Çevre</td><td>İnsanın sorumluluğu altında olan; Allah'ın emaneti olarak korunması gereken doğal ve sosyal ortam.</td></tr>
+    <tr><td>Teknoloji</td><td>İnsan aklının ürettiği araç ve sistemlerin bütünü. İslam, teknolojiyi amaç değil araç olarak değerlendirir.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">16</span><span class="btxt">DİN İSTİSMARI, İSLAMOFOBİ VE İYİLİK-KÖTÜLÜK SORUNU</span></div>
+  <div class="bolum-sinif">11. Sınıf Ünite 4</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Din İstismarı</td><td>Dinin, siyasi, ekonomik veya ideolojik çıkarlar için araç olarak kullanılması; dini değerlerin manipülasyonu.</td></tr>
+    <tr><td>İslamofobi</td><td>İslam'a ve Müslümanlara karşı haksız korku, önyargı ve ayrımcılık; özellikle Batı'da yaygın bir sosyal sorun.</td></tr>
+    <tr><td>Kötülük Problemi (Teodise)</td><td>"Allah kötülüğü neden yarattı?" biçimindeki kelam ilminin temel tartışması.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">17</span><span class="btxt">HRİSTİYANLIK VE YAHUDİLİK KAVRAMLARI</span></div>
+  <div class="bolum-sinif">11. Sınıf Ünite 5 · İbrahimi Dinler</div>
+  <div class="sub-kav">✝ Hristiyanlık</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Ahd-i Atik (Eski Ahit)</td><td>Hristiyanların kutsal saydığı İbranice yazılı bölüm; Yahudilerin Tanah'ıyla büyük ölçüde örtüşür.</td></tr>
+    <tr><td>Ahd-i Cedit (Yeni Ahit)</td><td>Hz. İsa'nın hayatını ve öğretilerini anlatan 27 kitaplık bölüm; dört İncil'i içerir.</td></tr>
+    <tr><td>İncil</td><td>Hz. İsa'ya indirilen ilahi kitap. İslam'a göre aslı tahrife uğramış; bugünkü İnciller insanlar tarafından kaleme alınmıştır.</td></tr>
+    <tr><td>Teslis</td><td>Tanrı'nın Baba, Oğul ve Kutsal Ruh olarak üç kişide tezahür ettiğini savunan Hristiyan inanç doktrini. İslam bu inancı tevhide aykırı bulur.</td></tr>
+    <tr><td>Orijinal Günah (Günah-ı Aslî)</td><td>Hz. Âdem'in yasak meyveyi yemesiyle tüm insanlığa geçtiğine inanılan günahın mirası. Hz. İsa'nın çarmıha gerilmesi bu günahı kefaret eder.</td></tr>
+    <tr><td>Vaftiz</td><td>Suya daldırma ya da su dökme yoluyla gerçekleştirilen Hristiyanlığa kabul töreni; günahlardan arınmayı simgeler.</td></tr>
+    <tr><td>Sakrament</td><td>Hristiyanlıkta ilahi lütfu taşıdığına inanılan kutsal törenler: vaftiz, evharistiya, konfirmasyon, günah çıkarma vb.</td></tr>
+    <tr><td>Evharistiya (Komünyon)</td><td>Hz. İsa'nın son akşam yemeğini anarak yapılan; ekmek ve şarap paylaşımına dayanan kutsal ayin.</td></tr>
+    <tr><td>Günah Çıkarma (Konfesyon)</td><td>Günahları rahibe itiraf ederek bağışlanma dileme; başta Katolik Kilisesi olmak üzere pek çok mezhepte uygulanır.</td></tr>
+    <tr><td>Kilise</td><td>Hristiyanların ibadet ettiği yapı; aynı zamanda Hristiyan cemaatinin kurumsal adı.</td></tr>
+    <tr><td>Papa</td><td>Vatikan'da ikamet eden; Katolik Kilisesi'nin ruhani başı ve Hz. Petrus'un halefi kabul edilen lider.</td></tr>
+    <tr><td>Patrik</td><td>Ortodoks Kilisesi'nin dini lideri; İstanbul, Moskova, Antakya gibi merkezlerde görev yapar.</td></tr>
+    <tr><td>Katolik Kilisesi</td><td>Papa'nın ruhani liderliğindeki en büyük Hristiyan mezhebi; yaklaşık 1,3 milyar üyesiyle en yaygın Hristiyan geleneği.</td></tr>
+    <tr><td>Ortodoks Kilisesi</td><td>1054 Büyük Şismi'nden sonra oluşan Doğu Hristiyan geleneği; Rum Ortodoks, Rus Ortodoks gibi kolları vardır.</td></tr>
+    <tr><td>Protestanlık</td><td>Martin Luther'in 1517'de başlattığı Reform hareketiyle Katolik Kilisesi'nden ayrılan İncil merkezli Hristiyan geleneği.</td></tr>
+    <tr><td>Haç</td><td>Hz. İsa'nın çarmıha gerilmesini simgeleyen; Hristiyanlığın evrensel sembolü.</td></tr>
+    <tr><td>Paskalya</td><td>Hz. İsa'nın dirilerek göğe yükselişini kutlayan; Hristiyanlığın en büyük ve kutsal bayramı.</td></tr>
+    <tr><td>Noel</td><td>25 Aralık'ta kutlanan; Hz. İsa'nın doğumunu temsil eden Hristiyan bayramı.</td></tr>
+    <tr><td>Araf (Purgatory)</td><td>Katolik inancına göre günahkâr ruhların cennete geçmeden önce arındığına inanılan ara âlem.</td></tr>
+    <tr><td>Misyoner</td><td>Hristiyanlığı farklı bölgelere yaymak amacıyla çalışan din görevlisi veya gönüllü.</td></tr>
+  </tbody></table>
+  <div class="sub-kav">✡ Yahudilik</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Tevrat (Tora)</td><td>Hz. Musa'ya indirilen ilahi kitap; Yahudiliğin en kutsal metni. İslam'a göre aslı tahrife uğramıştır.</td></tr>
+    <tr><td>Tanah</td><td>Yahudilerin kutsal yazılar bütünü; Tora, Nevim (Peygamberler) ve Ketuvim (Yazılar) bölümlerinden oluşur.</td></tr>
+    <tr><td>Talmud</td><td>Tora'nın yorumlandığı kapsamlı din hukuku ve gelenek derlemesi; Yahudi dini hayatının temel rehberi.</td></tr>
+    <tr><td>Yahve (YHWH)</td><td>Yahudilerin Tanrı için kullandığı kutsal özel isim; geleneksel olarak sesli telaffuz edilmez.</td></tr>
+    <tr><td>Haham (Rabbi)</td><td>Yahudi din âlimi ve cemaatin dini lideri; Talmud ve Tora konusunda otorite.</td></tr>
+    <tr><td>Sinagog</td><td>Yahudilerin dua, öğretim ve toplantı için kullandığı ibadet ve kültür mekânı.</td></tr>
+    <tr><td>Şabat (Sebt)</td><td>Cuma akşamından Cumartesi akşamına kadar süren; çalışmanın yasak olduğu kutsal dinlenme günü. Tevrat'ta Allah'ın yaratıştan sonra dinlenmesine dayandırılır.</td></tr>
+    <tr><td>Koşer</td><td>Yahudi dini hukukuna göre helal sayılan yiyecek standartları; domuz eti ve kanın yasak olması gibi kuralları kapsar.</td></tr>
+    <tr><td>Menora</td><td>Yahudiliğin en eski sembolü olan yedi kollu şamdan; Kudüs Tapınağı'nı temsil eder.</td></tr>
+    <tr><td>Hanuka</td><td>Makkabi zaferini ve Tapınak'taki yağ mucizesini kutlayan sekiz günlük Yahudi bayramı.</td></tr>
+    <tr><td>Yom Kipur</td><td>Yahudilerin en kutsal günü; oruç tutularak günahlar için kefaret arandığı "Büyük Af Günü".</td></tr>
+    <tr><td>Pesah (Fısıh)</td><td>İsrailoğullarının Mısır'dan kurtuluşunu kutlayan; hamursuz ekmek geleneğiyle anılan Yahudi bayramı.</td></tr>
+    <tr><td>Bar/Bat Mitzva</td><td>13 yaşındaki Yahudi erkeğinin ve 12 yaşındaki kızın dinî sorumluluk çağına girişini kutlayan tören.</td></tr>
+    <tr><td>Mesih (Maşiach)</td><td>Yahudilerin beklediği kurtarıcı kral. Hristiyanlar bu rolün Hz. İsa tarafından yerine getirildiğine inanır.</td></tr>
+    <tr><td>Diaspora</td><td>Yahudi halkının anavatanları dışında dünyaya dağılarak yaşaması.</td></tr>
+    <tr><td>Siyonizm</td><td>19. yüzyılda ortaya çıkan; Yahudilerin Filistin'de bağımsız devlet kurmasını hedefleyen hareket. 1948'de İsrail Devleti'nin kuruluşuna zemin hazırlamıştır.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">19</span><span class="btxt">DOĞU DİNLERİ — HİNDUİZM, BUDİZM VE UZAKDOĞU İNANÇLARI</span></div>
+  <div class="bolum-sinif">12. Sınıf Ünite 5</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Karma</td><td>Hinduizm ve Budizm'de kişinin eylemlerinin gelecekteki varoluşunu belirleyen evrensel nedensellik yasası.</td></tr>
+    <tr><td>Reenkarnasyon</td><td>Ruhun ölümden sonra başka bir bedende yeniden doğduğu inancı. Hinduizm ve Budizm'in temel öğretisi.</td></tr>
+    <tr><td>Tenasüh</td><td>Ruhun göç etmesi; reenkarnasyonun İslami literatürdeki karşılığı. İslam bu inancı reddeder.</td></tr>
+    <tr><td>Nirvana</td><td>Budizm'de acıdan tam kurtuluş; arzunun söndürülmesiyle ulaşılan en yüksek manevi hâl.</td></tr>
+    <tr><td>Kast</td><td>Hinduizm'deki kalıtsal sosyal tabakalaşma sistemi (Brahman, Kşatriya, Vaişya, Şudra).</td></tr>
+    <tr><td>Yoga</td><td>Hinduizm kökenli; beden, zihin ve ruh arasındaki uyumu sağlamayı amaçlayan disiplin.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="bolum">
+  <div class="bolum-baslik"><span class="bno">20</span><span class="btxt">DİNLER TARİHİ — DİĞER İNANÇLAR VE FELSEFİ GÖRÜŞLER</span></div>
+  <div class="bolum-sinif">10. Sınıf · 11–12. Sınıf Dinler Arası Konular</div>
+  <div class="sub-kav">🌍 Diğer İnanç Sistemleri</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Ehl-i Kitap</td><td>Allah tarafından kendilerine kutsal kitap gönderilmiş topluluklar: Yahudiler ve Hristiyanlar. İslam hukukunda özel statüsü vardır.</td></tr>
+    <tr><td>Haniflik</td><td>Hz. İbrahim'in getirdiği; puta tapmayan, saf tevhide dayanan özgün inanış. Kur'an Hz. Muhammed'i de Hanif olarak tanımlar.</td></tr>
+    <tr><td>Şamanizm</td><td>Şaman aracılığıyla ruh âlemiyle iletişim kurulduğuna inanan; İslam öncesi Türk ve Orta Asya topluluklarının inanç sistemi.</td></tr>
+    <tr><td>Totemizm</td><td>Belirli bir hayvan ya da bitkinin atadan geldiğine ve kutsal olduğuna inanan geleneksel inanış biçimi.</td></tr>
+    <tr><td>Animizm</td><td>Doğadaki her varlığın bir ruhu olduğuna inanan; doğa güçlerine kutsallık atfeden ilkel inanış biçimi.</td></tr>
+    <tr><td>Fetişizm</td><td>Belirli nesnelerin doğaüstü güce sahip olduğuna inanan; bu nesnelere tapma üzerine kurulu inanış biçimi.</td></tr>
+    <tr><td>Politeizm</td><td>Birden fazla tanrının varlığına inanan çok tanrılı dinler (antik Yunan, Roma, Mısır dinleri gibi).</td></tr>
+    <tr><td>Monoteizm</td><td>Tek Tanrı'nın varlığına inanan; İslam, Hristiyanlık ve Yahudilik gibi semavi dinlerin temel özelliği.</td></tr>
+    <tr><td>Zerdüştlük</td><td>Peygamber Zerdüşt tarafından kurulan; iyilik (Hürmüz) ve kötülük (Ehrimen) güçleri arasındaki mücadeleyi esas alan İran kökenli din.</td></tr>
+    <tr><td>Haricilik</td><td>Büyük günah işleyeni kâfir sayan; İslam tarihinin ilk siyasi-itikadi ayrılık hareketi.</td></tr>
+    <tr><td>Mutezile</td><td>Aklı ön plana çıkaran kelam okulu; Allah'ın sıfatları ve kul iradesi konularında Ehl-i Sünnet'ten ayrılan görüşler.</td></tr>
+    <tr><td>Şia</td><td>Hz. Ali'nin halifeliğini esas alan; imamet inancıyla Sünnilerden ayrılan İslam mezhebi.</td></tr>
+    <tr><td>Alevilik-Bektaşilik</td><td>Hz. Ali sevgisini merkeze alan; cem ibadeti ve özgün ritüellere sahip Türk-İslam geleneği.</td></tr>
+  </tbody></table>
+  <div class="sub-kav">🧠 Tanrı Anlayışına Göre Felsefi Görüşler</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Teizm</td><td>Evreni yaratan, ona müdahale eden ve insanlarla iletişim kuran kişisel bir Tanrı'nın varlığına inanan görüş. Semavi dinlerin ortak tabanıdır.</td></tr>
+    <tr><td>Deizm</td><td>Tanrı'nın evreni yarattığını; ancak sonrasına müdahale etmediğini, vahiy göndermediğini ve duaları yanıtlamadığını savunan akılcı inanç. Voltaire ve Rousseau bu görüşü benimsemiştir.</td></tr>
+    <tr><td>Ateizm</td><td>Tanrı ya da tanrıların varlığını reddeden felsefi tutum. Pozitif ateizm "Tanrı yoktur" derken negatif ateizm "Tanrı inancım yok" der.</td></tr>
+    <tr><td>Agnostisizm</td><td>Tanrı'nın varlığının insan aklıyla bilinemeyeceğini savunan tutum; ne inkâr eder ne kabul eder. Thomas Huxley tarafından kavramsallaştırılmıştır.</td></tr>
+    <tr><td>Panteizm</td><td>Tanrı ile evrenin özdeş olduğunu, Tanrı'nın doğanın ta kendisi olduğunu savunan görüş. Spinoza'nın felsefesiyle özdeşleşmiştir.</td></tr>
+    <tr><td>Panenteizm</td><td>Evrenin Tanrı'nın içinde yer aldığını ama Tanrı'nın evreni aştığını savunan görüş; Tanrı'yı hem içkin hem aşkın kabul eder.</td></tr>
+    <tr><td>Monoteizm</td><td>Tek bir Tanrı'nın varlığına inanmak. İslam'ın tevhid inancı monoteizmin en saf ve net ifadesidir.</td></tr>
+    <tr><td>Politeizm</td><td>Birden fazla tanrıya inanmak. Antik Yunan, Roma ve pek çok ilkel dinin temel özelliğidir.</td></tr>
+    <tr><td>Nihilizm</td><td>Hayatın nesnel bir anlam, değer veya amacı olmadığını savunan felsefi görüş. Nietzsche nihilizmi eleştirmiş, "Tanrı öldü" metaforuyla çağın değersizleşmesini anlatmıştır.</td></tr>
+  </tbody></table>
+  <div class="sub-kav">📚 Bilgi ve Gerçeklik Felsefesi</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Felsefe</td><td>Yunanca "sophia" (bilgelik) ve "philos" (seven) sözcüklerinden türeyen; varlık, bilgi, değer ve anlam sorularını akıl yoluyla araştıran disiplin.</td></tr>
+    <tr><td>Metafizik</td><td>Fizik ötesi gerçeklik; varlığın özü, Tanrı, ruh ve evrenin yapısı gibi konuları inceleyen felsefe dalı.</td></tr>
+    <tr><td>Ontoloji</td><td>"Varlık nedir?" sorusunu araştıran felsefe dalı. Varlığın kategorileri ve temel yapısıyla ilgilenir.</td></tr>
+    <tr><td>Epistemoloji</td><td>"Bilgi nedir, nasıl elde edilir, sınırları nelerdir?" sorularını araştıran bilgi felsefesi. Dini bilgi ile akli bilginin ilişkisi açısından kelam ilmiyle kesişir.</td></tr>
+    <tr><td>Rasyonalizm</td><td>Gerçek bilginin akıl yoluyla elde edilebileceğini savunan görüş. Descartes, Leibniz ve Spinoza bu akımın temsilcileridir.</td></tr>
+    <tr><td>Empirizm</td><td>Bilginin kaynağının deney ve gözlem olduğunu savunan görüş. Locke, Hume ve Berkeley bu akımın temsilcileridir.</td></tr>
+    <tr><td>Pozitivizm</td><td>Yalnızca gözlem ve deneyle doğrulanabilen bilgilerin gerçek sayılabileceğini savunan; Auguste Comte'un kurduğu felsefi akım. Metafizik ve dini bilgiyi dışlar.</td></tr>
+    <tr><td>Pragmatizm</td><td>Bir fikrin doğruluğunun pratikteki işe yararlılığıyla ölçüleceğini savunan Amerikan felsefe akımı. William James ve John Dewey öncüleridir.</td></tr>
+    <tr><td>Relativizm</td><td>Doğrunun, iyinin ve güzelin evrensel olmadığını; kültüre, bireye ve koşullara göre değiştiğini savunan görüş. İslam'ın evrensel ahlak anlayışıyla çelişir.</td></tr>
+    <tr><td>Skeptisizm (Şüphecilik)</td><td>Hiçbir şeyin kesin olarak bilinemeyeceğini ya da bilgiye ulaşmanın son derece güç olduğunu savunan felsefi tutum. Descartes yöntemli şüpheyi felsefeye dahil etmiştir.</td></tr>
+  </tbody></table>
+  <div class="sub-kav">⚖️ Ahlak ve Anlam Felsefesi</div>
+  <table><thead><tr><th>KAVRAM</th><th>ANLAM / TANIM</th></tr></thead><tbody>
+    <tr><td>Etik (Ahlak Felsefesi)</td><td>İyi, kötü, doğru, yanlış, ödev ve erdemin ne olduğunu araştıran felsefe dalı. İslam ahlakı vahye dayalı etikle akli etiği birleştirir.</td></tr>
+    <tr><td>Hedonizm</td><td>Hazzın ve zevkin en yüksek iyilik olduğunu; ahlaki eylemlerin haz sağlamak amacıyla yapılması gerektiğini savunan görüş.</td></tr>
+    <tr><td>Faydacılık (Utilitarizm)</td><td>En fazla sayıda insanın en büyük mutluluğunu sağlayan eylemin ahlaki açıdan doğru olduğunu savunan görüş. J. S. Mill ve Bentham temsilcileridir.</td></tr>
+    <tr><td>Deontoloji</td><td>Eylemlerin sonuçlarından bağımsız olarak ahlaki ödevler çerçevesinde değerlendirileceğini savunan etik anlayış. Kant'ın kategorik imperatifi bu akımın temelidir.</td></tr>
+    <tr><td>Erdem Etiği</td><td>Ahlaki yaşamın iyi alışkanlıklar ve erdemlerin kazanılmasıyla mümkün olduğunu savunan; Aristoteles'e dayanan etik anlayış. İslam'ın fazilet anlayışıyla örtüşen yönleri vardır.</td></tr>
+    <tr><td>Varoluşçuluk (Egzistansiyalizm)</td><td>"Varoluş özden önce gelir" ilkesiyle; insanın anlam ve özgürlüğünü kendi eylemleriyle yarattığını savunan felsefi akım. Sartre ve Camus öncüleridir. İslam'ın insan anlayışıyla kısmen örtüşür, kısmen çelişir.</td></tr>
+    <tr><td>Stoacılık</td><td>Erdem ve aklın rehberliğiyle huzura ulaşılabileceğini; dış olayların değil tepkilerin kontrol edilebileceğini savunan antik Yunan-Roma felsefesi. Marcus Aurelius ve Epiktetos öncüleridir.</td></tr>
+    <tr><td>Epikürizm</td><td>Acıdan uzak durma ve sade zevklerde mutluluğu arayan Epikuros'a dayanan felsefi akım; ölüm korkusundan ve dini kaygılardan özgürleşmeyi hedefler.</td></tr>
+    <tr><td>Materyalizm</td><td>Gerçekte yalnızca maddenin var olduğunu; bilinç ve ruhun da maddenin ürünleri olduğunu savunan görüş. İslam ruh ve manevi âlemin varlığını kabul ettiğinden materyalizmi reddeder.</td></tr>
+    <tr><td>İdealizm</td><td>Gerçekliğin temelde zihinsel ya da tinsel olduğunu; maddenin zihin veya ruhun bir yansıması olduğunu savunan görüş. Platon ve Hegel temsilcileridir.</td></tr>
+    <tr><td>Determinizm</td><td>Evrendeki tüm olayların önceki nedenler tarafından zorunlu olarak belirlendiğini; özgür iradenin olmadığını savunan görüş. İslam'ın kader anlayışıyla kıyaslanır ancak farklıdır.</td></tr>
+    <tr><td>Özgür İrade</td><td>İnsanın eylemlerini bağımsız olarak seçebildiğini savunan görüş. İslam, insanın irade sahibi olduğunu ve bu irade nedeniyle hesaba çekileceğini kabul eder.</td></tr>
+    <tr><td>Hümanizm</td><td>İnsanı ve insan değerlerini merkeze alan; mutluluğun ve ahlakın kaynağını insan aklında ve deneyiminde arayan felsefi-kültürel akım. Dini hümanizm ile laik hümanizm olarak ikiye ayrılır.</td></tr>
+    <tr><td>Laisizm (Sekülarizm)</td><td>Din ile devlet işlerinin birbirinden ayrılması gerektiğini savunan siyasi-felsefi görüş. Din ve devlet ilişkileri açısından İslam hukukuyla tartışmalı bir konudur.</td></tr>
+    <tr><td>Teodise</td><td>"Eğer Allah iyiyse dünyada neden kötülük var?" sorusunu yanıtlamaya çalışan kelam ve felsefe alanı. İslam teodisesi imtihan, irade ve hikmeti esas alır.</td></tr>
+  </tbody></table>
+</div>
+
+</div><!-- /kav-container -->
+<footer style="background:rgba(0,0,0,.25);color:#d4b8ff;">MEB Türkiye Yüzyılı Maarif Modeli (TYMM) · 9–12. Sınıf Din Kültürü ve Ahlak Bilgisi · Tarayıcıdan <strong>Dosya → Yazdır</strong> ile PDF'e dönüştürebilirsiniz.</footer>
+</div><!-- /tab-kavramlar -->
+
+<!-- ══════════════════════════════════════
+     QUIZ
+══════════════════════════════════════ -->
+<div id="tab-quiz">
+
+<!-- Yapışkan ilerleme çubuğu -->
+<div class="prog-wrap">
+  <div class="prog-meta">
+    <span id="ptxt">📌 Soru 0 / 70</span>
+    <span id="ppct">%0 tamamlandı</span>
+  </div>
+  <div class="prog-bg"><div class="prog-fill" id="pf"></div></div>
+</div>
+
+<!-- Skor şeridi -->
+<div class="score-strip">
+  <span class="badge b-ok">✅ Doğru: <b id="sc">0</b></span>
+  <span class="badge b-no">❌ Yanlış: <b id="sw">0</b></span>
+  <span class="badge b-re">📋 Kalan: <b id="sr">70</b></span>
+</div>
+
+<div class="qz-inner">
+<div id="qc"></div>
+
+<div id="rs" style="display:none">
+  <div class="res-card">
+    <div class="res-hd">
+      <span class="res-emoji" id="re">🏆</span>
+      <div class="res-big" id="rscore">0/70</div>
+      <div class="res-total">Toplam Puan</div>
+      <div class="res-grade" id="rgrade">—</div>
+    </div>
+    <div class="res-grid">
+      <div class="res-box"><div class="res-n g" id="rc">0</div><div class="res-l">Doğru Cevap</div></div>
+      <div class="res-box"><div class="res-n r" id="rw">0</div><div class="res-l">Yanlış Cevap</div></div>
+      <div class="res-box"><div class="res-n b" id="rp">%0</div><div class="res-l">Başarı Oranı</div></div>
+    </div>
+    <div class="res-bar">
+      <strong>📊 Performans Grafiği</strong>
+      <div class="bar-bg"><div class="bar-fill bar-g" id="bg" style="width:0%">0 Doğru</div></div>
+      <div class="bar-bg" style="margin-top:8px"><div class="bar-fill bar-r" id="br" style="width:0%">0 Yanlış</div></div>
+    </div>
+    <div class="brkdn">
+      <h3>Bölüm Bazlı Performans</h3>
+      <div id="bkd"></div>
+    </div>
+    <button class="rst-btn" onclick="restart()">🔄 Testi Yeniden Başlat</button>
+  </div>
+</div>
+
+</div><!-- /qz-inner -->
+</div><!-- /tab-quiz -->
+
+<script>
+// ── ACCORDION BAŞLATMA (lazy — kavramlar sekmesine ilk tıkta çalışır) ──
+let kavAccordionReady = false;
+function initAccordion(){
+  if(kavAccordionReady) return;
+  kavAccordionReady = true;
+  document.querySelectorAll('.bolum').forEach(function(bolum, idx){
+    const baslik = bolum.querySelector('.bolum-baslik');
+    if(baslik.dataset.acc) return; // zaten init edilmiş
+    baslik.dataset.acc = '1';
+
+    // Ok ikonu ekle
+    const arrow = document.createElement('span');
+    arrow.className = 'barrow';
+    arrow.textContent = '▼';
+    baslik.appendChild(arrow);
+
+    // Başlıktan sonraki tüm içeriği .bolum-content'e taşı
+    const content = document.createElement('div');
+    content.className = 'bolum-content';
+    let sib = baslik.nextSibling;
+    while(sib){
+      const next = sib.nextSibling;
+      content.appendChild(sib);
+      sib = next;
+    }
+    bolum.appendChild(content);
+
+    // İlk bölüm açık başlasın
+    if(idx === 0) bolum.classList.add('open');
+
+    // Tıklama toggle
+    baslik.addEventListener('click', function(){
+      bolum.classList.toggle('open');
+    });
+  });
+}
+
+// ── TAB SWITCHING ──
+function showTab(t){
+  const landing = document.getElementById('landing');
+  if(landing) landing.style.display = 'none';
+  document.querySelector('header').style.display = 'block';
+  document.getElementById('tab-kavramlar').style.display = t==='kavramlar'?'block':'none';
+  document.getElementById('tab-quiz').style.display = t==='quiz'?'block':'none';
+  document.getElementById('btn-kav').classList.toggle('active', t==='kavramlar');
+  document.getElementById('btn-quiz').classList.toggle('active', t==='quiz');
+  if(t==='kavramlar') initAccordion();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── QUIZ DATA ──
+const Q=[
+  {s:"1. İslam'ın Temel Kavramları",q:"\"Allah'ın bir ve ortaksız olduğuna inanmak\" hangi kavramı tanımlar?",o:["Nifak","Tevhid","Tevekkül","Marifet","Şirk"],a:1,e:"Tevhid, Allah'ın bir, eşsiz ve ortaksız olduğuna kalben inanmaktır. 'Lâ ilâhe illallah' ifadesiyle vurgulanan İslam'ın temelidir."},
+  {s:"1. İslam'ın Temel Kavramları",q:"Allah'ın insana yaratılıştan verdiği iyiye yönelme kapasitesi hangi kavramla ifade edilir?",o:["Fıtrat","Takva","Zühd","Sabır","Tövbe"],a:0,e:"Fıtrat, Allah'ın insanı yaratılıştan verdiği doğal eğilim ve kabiliyettir. 'Her insan fıtrat üzere doğar.' (Hadis)"},
+  {s:"1. İslam'ın Temel Kavramları",q:"Allah'a ortak koşmak; İslam'ın en büyük günahı olarak kabul edilen kavram hangisidir?",o:["Küfür","Nifak","Şirk","Bid'at","Tevekkül"],a:2,e:"Şirk, Allah'a herhangi bir varlığı ortak koşmaktır. İslam'a göre bağışlanması en güç olan büyük günahtır."},
+  {s:"1. İslam'ın Temel Kavramları",q:"Dışarıdan Müslüman görünüp içten inkâr eden kişiye ne denir?",o:["Kâfir","Münafık","Mürted","Fasık","Zındık"],a:1,e:"Dışarıdan Müslüman görünüp içten inkâr etmeye nifak, bu kişiye münafık denir."},
+  {s:"1. İslam'ın Temel Kavramları",q:"\"Allah'ın emirlerine uyup yasaklarından sakınmak; dindarlığın en üst hâli\" hangi kavramdır?",o:["İhlas","İhsan","Takva","Zühd","Sabır"],a:2,e:"Takva, Allah'a derin saygıdan doğan; haramlardan kaçınıp emirlere uymayı içselleştirmiş yüksek dindarlık hâlidir."},
+  {s:"1. İslam'ın Temel Kavramları",q:"\"Gerekli çabayı harcadıktan sonra sonucu Allah'a bırakmak\" hangi kavramla ifade edilir?",o:["Tefekkür","Tövbe","Tevekkül","Tebliğ","Zühd"],a:2,e:"Tevekkül, gerekli her türlü çabayı harcadıktan sonra sonucu Allah'a bırakmaktır."},
+  {s:"1. İslam'ın Temel Kavramları",q:"İşlenen günahtan pişmanlık duyarak Allah'a yönelmek ve bir daha yapmamaya karar vermek hangisidir?",o:["Dua","Tövbe","Hamd","İstiğfar","Sadaka"],a:1,e:"Tövbe, işlenen günahtan pişmanlık duyarak Allah'a yönelmek ve bir daha yapmamaya azmetmektir."},
+  {s:"1. İslam'ın Temel Kavramları",q:"Evren ve yaratılış üzerine derin düşünmek; Allah'ın ayetlerini akıl yürüterek anlamlandırmak hangi kavramdır?",o:["Tefekkür","Tevekkül","Tebliğ","Temsil","Zikir"],a:0,e:"Tefekkür, evren, insan ve yaratılış üzerine derin düşünmek; Allah'ın ayetlerini akıl yürüterek anlamlandırmaktır."},
+  {s:"1. İslam'ın Temel Kavramları",q:"\"Dünyaya aşırı bağlanmamak; ahireti ön planda tutarak sade yaşamak\" hangi kavramdır?",o:["Sabır","Şükür","Zühd","Kanaat","Tevekkül"],a:2,e:"Zühd, dünyaya aşırı bağlanmamak; ahireti ön planda tutarak sade yaşamaktır."},
+  {s:"1. İslam'ın Temel Kavramları",q:"Sıkıntı ve zorluklara şikâyet etmeksizin katlanmak hangi erdemin tanımıdır?",o:["Vefa","Sabır","Fedakârlık","Merhamet","Şükür"],a:1,e:"Sabır, sıkıntı, musibet ve zorluklara şikâyet etmeksizin katlanmaktır. İmanın göstergesi ve temel erdemdir."},
+  {s:"2. İman Esasları ve Ahiret",q:"Kıyamette ölülerin diriltilmesine ne denir?",o:["Haşr","Ba's","Şefaat","Berzah","Mîzan"],a:1,e:"Ba's, kıyamette ölülerin diriltilmesidir. Haşr ise diriltilen insanların hesap için Allah'ın huzurunda toplanmasıdır."},
+  {s:"2. İman Esasları ve Ahiret",q:"Ölümden kıyamete kadar ruhların beklediği ara âleme ne denir?",o:["Cennet","Cehennem","Berzah","Levh-i Mahfuz","Siccin"],a:2,e:"Berzah, ölümden kıyamete kadar ruhların beklediği ara âlemdir."},
+  {s:"2. İman Esasları ve Ahiret",q:"Kıyamette amellerin tartılacağı ilahi teraziye ne denir?",o:["Sırat","Mîzan","Şefaat","Ba's","Haşr"],a:1,e:"Mîzan, kıyamette amellerin tartılacağı ilahi terazidir."},
+  {s:"2. İman Esasları ve Ahiret",q:"Cehennem üzerindeki; herkesin geçmek zorunda olduğu köprüye ne denir?",o:["Berzah","Mîzan","Sırat","Haşr","Kaza"],a:2,e:"Sırat, cehennem üzerindeki köprüdür; herkesin geçmesi gereken ilahi sınav noktasıdır."},
+  {s:"2. İman Esasları ve Ahiret",q:"Allah'ın olacak her şeyi ezelden kaydettiği korunmuş levhaya ne denir?",o:["Mushaf","Levh-i Mahfuz","Zebur","Suhuf","Kalem"],a:1,e:"Levh-i Mahfuz, Allah'ın olacak her şeyi ezelden kaydettiği korunmuş levhadır."},
+  {s:"2. İman Esasları ve Ahiret",q:"Peygamberlerin Allah'ın izniyle günahkârlara aracılık etmesine ne denir?",o:["Tebliğ","Temsil","Şefaat","İctihad","Vahiy"],a:2,e:"Şefaat, peygamberlerin ve salih kulların Allah'ın izniyle günahkârlara aracılık etmesidir."},
+  {s:"2. İman Esasları ve Ahiret",q:"Allah'ın her şeyi ezelden bilip takdir etmesi hangi kavramdır?",o:["Kaza","Kader","İrade","Tevekkül","Cebr"],a:1,e:"Kader, Allah'ın sonsuz ilmiyle her şeyi ezelden bilip belirlemesidir. Kaza ise bu takdirin zamanı gelince gerçekleşmesidir."},
+  {s:"2. İman Esasları ve Ahiret",q:"Allah'ın zatında var olan olumlu sıfatlar (Hayat, İlim, İrade, Kudret…) hangi adla anılır?",o:["Sıfat-ı Selbiyye","Sıfat-ı Subutiyye","Zatî Sıfatlar","Haberî Sıfatlar","Fiilî Sıfatlar"],a:1,e:"Sıfat-ı Subutiyye, Allah'ın zatında var olan olumlu sıfatlardır: Hayat, İlim, İrade, Kudret, Semi', Basar, Kelam, Tekvin."},
+  {s:"3. Allah'ı Tanıma — Varlık ve Bilgi",q:"Evrende var olan amaçlılık ve tasarımı esas alarak Allah'ın varlığını ispat eden felsefi yaklaşım hangisidir?",o:["Panteizm","Teleoloji","Agnostisizm","Deizm","Ontolojik Delil"],a:1,e:"Teleoloji, evrende var olan amaçlılık ve tasarımı esas alarak Allah'ın varlığını ispat etmeye çalışan felsefi yaklaşımdır."},
+  {s:"3. Allah'ı Tanıma — Varlık ve Bilgi",q:"İnsan aklı ve duyularıyla bilinemeyen; yalnızca Allah'ın bildiği gizli alan hangi kavramdır?",o:["Şehadet","Mütevatir","Gayb","Sadık Haber","Bâtın"],a:2,e:"Gayb, insan aklı ve duyularıyla doğrudan bilinemeyen; yalnızca Allah'ın bildiği ya da peygamberlere bildirdiği gizli alandır."},
+  {s:"3. Allah'ı Tanıma — Varlık ve Bilgi",q:"Allah'ı isimleri, sıfatları ve fiilleri aracılığıyla tanıma çabası hangi kavramla ifade edilir?",o:["Marifet","Marifetullah","İlim","Tefekkür","Zikir"],a:1,e:"Marifetullah, Allah'ı isimleri, sıfatları ve fiilleri aracılığıyla tanıma; O'nu hakkıyla bilme çabasıdır."},
+  {s:"3. Allah'ı Tanıma — Varlık ve Bilgi",q:"Yalan üzerinde birleşmeleri mümkün olmayan büyük kitlenin aktardığı; kesin bilgi ifade eden habere ne denir?",o:["Sadık Haber","Mütevatir","Şehadet","Kıyas","Ahad Haber"],a:1,e:"Mütevatir, yalan üzerinde birleşmeleri mümkün olmayan büyük bir kitlenin aktardığı bilgi veya haberdir; kesin bilgi kaynağı sayılır."},
+  {s:"3. Allah'ı Tanıma — Varlık ve Bilgi",q:"Evrendeki mükemmel düzen ve uyumu esas alarak Allah'ın varlığını ispatlayan delile ne denir?",o:["Gaye Delili","Nizam Delili","Ontolojik Delil","Hudus Delili","İmkân Delili"],a:1,e:"Nizam delili, evrendeki mükemmel düzen ve uyumu esas alarak Allah'ın varlığını ispatlayan delildir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Kur'an-ı Kerim kaç sureden oluşmaktadır?",o:["30","99","114","124","130"],a:2,e:"Kur'an-ı Kerim 114 sureden oluşmaktadır. En kısa sure Kevser (3 ayet), en uzun sure Bakara'dır (286 ayet)."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Kur'an'ın 30 eşit bölümünden her birine ne denir?",o:["Sure","Hizb","Cüz","Ayet","Fasıl"],a:2,e:"Cüz, Kur'an'ın 30 eşit bölümünden her biridir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Hicretten önce Mekke'de inen; tevhid, ahiret ve ahlak konularını işleyen sureler hangi adla anılır?",o:["Medenî Sure","Mekkî Sure","Muhkem Sure","Müteşabih Sure","Seb'ul Mesani"],a:1,e:"Mekkî sureler, hicretten önce Mekke'de inen; tevhid, ahiret ve ahlak konularını işleyen surelerdir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Kur'an ayetlerini dilbilgisi, bağlam ve rivayetler çerçevesinde açıklama ilmine ne denir?",o:["Kıraat","Tecvid","Tefsir","Meal","İ'rab"],a:2,e:"Tefsir, Kur'an ayetlerini dilbilgisi, bağlam ve rivayetler çerçevesinde açıklama ilmidir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Anlamı açık, net ve yoruma kapalı ayetlere ne denir?",o:["Müteşabih","Muhkem","Medenî","Mekkî","Mücmel"],a:1,e:"Muhkem, anlamı açık, net ve yoruma kapalı ayetlerdir. Müteşabih ise anlamı kapalı, yoruma muhtaç ayetlerdir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Daha sonra inen bir ayetin önceki ayetin hükmünü kaldırmasına ne denir?",o:["Tevil","Meal","Nesh","Tefsir","Tahrif"],a:2,e:"Nesh, daha sonra inen bir ayetin önceki ayetin hükmünü kaldırmasıdır."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Kur'an'ı harf ve mahreçlerine uygun biçimde okuma kuralları ilmine ne denir?",o:["Kıraat","Tecvid","Tefsir","Hafızlık","Tilâvet"],a:1,e:"Tecvid, Kur'an'ı harf ve mahreçlerine uygun biçimde okuma kuralları ilmidir."},
+  {s:"4. Vahiy, Kur'an ve Mushaf",q:"Kur'an-ı Kerim'in yazılıp bir araya getirilmiş kitap formuna ne denir?",o:["Sure","Mushaf","Suhuf","Cüz","Levh-i Mahfuz"],a:1,e:"Mushaf, Kur'an-ı Kerim'in yazılıp bir araya getirilmiş kitap formudur. Hz. Osman döneminde standart hâle getirilmiştir."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"\"Peygamberlerin sonuncusu\" anlamına gelen Hz. Muhammed'e ait unvan hangisidir?",o:["Üsve-i Hasene","Hatemülenbiya","El-Emin","Nebi","Rasul"],a:1,e:"Hatemülenbiya, 'peygamberlerin sonuncusu' anlamındadır; ondan sonra peygamber gelmeyeceğini ifade eder."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"\"En güzel örnek\" anlamına gelen; Kur'an'ın Hz. Peygamber için kullandığı ifade hangisidir?",o:["Tebyin","Üsve-i Hasene","Temsil","Teşri","El-Emin"],a:1,e:"Üsve-i Hasene, 'en güzel örnek' demektir. Kur'an'ın Hz. Peygamber için kullandığı ifadedir (Ahzab 33/21)."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Hz. Peygamber'in söz, davranış ve onaylarının yazılı kaydına ne denir?",o:["Sünnet","Siyer","Hadis","İsnad","Fıkıh"],a:2,e:"Hadis, Hz. Peygamber'in söz, davranış ve onaylarının sonraki nesillere aktarılmış yazılı kaydıdır."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Hadisin kimlerden kimlerle aktarıldığını gösteren ravi zincirine ne denir?",o:["Metin","İsnad","Sened","Siyer","Ravi"],a:1,e:"İsnad, hadisin kimlerden kimlerle aktarıldığını gösteren ravi zinciridir."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Hz. Peygamber ve Müslümanların Mekke'den Medine'ye göç ettiği yıl hangisidir?",o:["610","615","622","630","640"],a:2,e:"Hicret 622 yılında gerçekleşmiştir. İslam takviminin başlangıcıdır."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Hz. Peygamber'i iman hâlinde görüp Müslüman olarak vefat etmiş kişilere ne denir?",o:["Ensar","Muhacir","Ashab (Sahabe)","Ehl-i Beyt","Tabiin"],a:2,e:"Ashab (Sahabe), Hz. Peygamber'i iman hâlinde görüp Müslüman olarak vefat etmiş kişilerdir."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Hz. Peygamber'in 632 yılındaki son haccında okuduğu tarihi konuşmaya ne denir?",o:["Bedir Hutbesi","Veda Hutbesi","Mekke Hutbesi","Cumalık","Medine Hutbesi"],a:1,e:"Veda Hutbesi, Hz. Peygamber'in 632 yılındaki son haccında okuduğu; insan hak ve eşitliğini evrensel ilkelerle ilan eden tarihi hutbedir."},
+  {s:"5. Peygamberlik ve Hz. Muhammed",q:"Peygamberlerin Allah'ın izniyle gösterdikleri; doğa yasalarını aşan olağanüstü olaya ne denir?",o:["Keramet","İstidrâc","Mucize","İlham","Kehanet"],a:2,e:"Mucize, peygamberlerin Allah'ın izniyle gösterdikleri; doğa yasalarını aşan olağanüstü olaydır."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"İbadeti yalnızca Allah rızası için; gösterişten uzak yapmak hangi kavramdır?",o:["İhsan","İhlas","İffet","Niyet","Takva"],a:1,e:"İhlas, ibadeti yalnızca Allah rızası için, gösteriş ve dünya kaygısından uzak yapmaktır."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Dinen kesin olarak yasaklanmış; yapılması günah olan fiile ne denir?",o:["Mekruh","Mübah","Haram","Bid'at","Vacip"],a:2,e:"Haram, kesin delille yasaklanmış; yapılması günah olan fiildir."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Dinde sonradan icat edilmiş; Hz. Peygamber ve sahabeden bilinmeyen uygulamaya ne denir?",o:["Hurafe","Bid'at","Mekruh","Sünnet","Müstehap"],a:1,e:"Bid'at, dinde sonradan icat edilmiş; Hz. Peygamber ve sahabeden bilinmeyen uygulamadır."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Nisap miktarına ulaşan malın kaçta biri zekât olarak verilir?",o:["1/10","1/20","1/40","1/5","1/30"],a:2,e:"Zekât, nisap miktarına ulaşan malın kırkta biridir (%2,5). Sosyal dayanışmanın mali boyutudur."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Bir dönemdeki müçtehitlerin fikir birliğine varması; İslam hukukunun üçüncü kaynağı hangisidir?",o:["Kıyas","İctihad","Fetva","İcma","Sünnet"],a:3,e:"İcma, bir dönemdeki müçtehitlerin dini mesele üzerinde fikir birliğine varmasıdır; İslam hukukunun üçüncü kaynağıdır."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Dinin koruma altına aldığı beş temel maslahat hangi kavramla ifade edilir?",o:["Zarurât-ı Hamse","İman Esasları","Şartlar-ı Namaz","Ükubat","Rükünler"],a:0,e:"Zarurât-ı Hamse, dinin koruma altına aldığı beş temel maslahattır: canın, aklın, neslin, malın ve dinin korunması."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Başkasına verilen zarar; yalnızca hak sahibinin affıyla giderilebilen günah türüne ne denir?",o:["Günah-ı Kebir","Kul Hakkı","Had Cezası","Keffaret","Tazir"],a:1,e:"Kul hakkı, başkasına verilen zarar veya haksızlıktır. Yalnızca hak sahibinin affıyla giderilebilir."},
+  {s:"6. İbadetler ve Fıkhi Hükümler",q:"Nitelikli İslam âliminin Kur'an ve Sünnet'ten hüküm çıkarma çabası hangi kavramla ifade edilir?",o:["İcma","Fetva","İctihad","Kıyas","Rey"],a:2,e:"İctihad, nitelikli İslam âliminin Kur'an ve Sünnet'ten hüküm çıkarma çabası ve yöntemidir."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"İslam ahlak felsefesindeki dört temel erdem hangileridir?",o:["Sabır, Şükür, Tövbe, Dua","Adalet, Şecaat, İffet, Hikmet","Tevazu, Vefa, Cömertlik, Merhamet","İhlas, İhsan, Takva, Zühd","Doğruluk, Emanet, Dürüstlük, Hilm"],a:1,e:"Dört temel erdem: Adalet (herkese hakkını vermek), Şecaat (cesaret ve yiğitlik), İffet (nefse hâkim olmak) ve Hikmet (bilgelik)."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Durumu doğru okuyup yerinde karar verme yeteneği; düşünme gücünün dengeli kullanımı hangi erdemdir?",o:["Adalet","Şecaat","İffet","Hikmet","Kanaat"],a:3,e:"Hikmet, bilgelik; durumu doğru okuyup yerinde karar verme yeteneğidir. Dört temel erdemden biridir."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Cesaret ve yiğitlik; hakkı savunmaktan çekinmemek hangi erdemdir?",o:["Hikmet","Şecaat","İffet","Adalet","Sabır"],a:1,e:"Şecaat, cesaret ve yiğitliktir; hakkı savunmaktan çekinmemektir. Gazap gücünün dengeli kullanımıdır."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Alçakgönüllülük; bilgi, mal veya makamı üstünlük aracına dönüştürmemek hangi erdemdir?",o:["Kanaat","Haya","Tevazu","Vefa","Sabır"],a:2,e:"Tevazu, alçakgönüllülüktür; bilgi, mal veya makamı başkalarına karşı üstünlük aracına dönüştürmemektir."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Kendini üstün görüp başkalarını küçümsemek; İslam'ın en şiddetle kınadığı nefis hastalığı hangisidir?",o:["Haset","Riya","Kibir","Ucub","Gıybet"],a:2,e:"Kibir, kendini üstün görüp başkalarını küçümsemektir. İslam'ın en şiddetle kınadığı nefis hastalığıdır."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Bir kişiyi yokluğunda hoşlanmayacağı şekilde anlatmak hangi günahı tanımlar?",o:["İftira","Gıybet","Nemime","Yalan","Kin"],a:1,e:"Gıybet, bir kişiyi yokluğunda, hoşlanmayacağı şekilde anlatmaktır. Kur'an'da ölü kardeşinin etini yemekle eşdeğer tutulur (Hucurat 49/12)."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"İbadeti Allah rızası için değil insanların takdirini kazanmak için yapmak; 'gizli şirk' hangisidir?",o:["Ucub","Kibir","Haset","Riya","Nemime"],a:3,e:"Riya, ibadeti ve iyilikleri Allah rızası için değil, insanların takdirini kazanmak için yapmaktır; 'gizli şirk' olarak nitelendirilir."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"\"Haya imandan bir şubedir\" hadisiyle vurgulanan; kötülükten alıkoyan ahlaki değer hangisidir?",o:["Vefa","Haya","Sadakat","Emanet","Hilm"],a:1,e:"Haya, Allah'a ve insanlara karşı utanma duygusudur; kötülükten alıkoyan ahlaki değerdir."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Başkasındaki nimetin yok olmasını istemek; imana aykırı sayılan kötü duygu hangisidir?",o:["Kin","Zulüm","Haset","Nemime","Kibir"],a:2,e:"Haset, başkasındaki nimetin yok olmasını istemektir. Kul hakkını da ihlal ettiğinden imana aykırı sayılır."},
+  {s:"7. Ahlak — Temel İlkeler ve Erdemler",q:"Orta Asya ve Anadolu'da gelişen; dürüstlük, vefa ve dayanışmayı esas alan esnaf teşkilatı hangisidir?",o:["Mevlevilik","Bektaşilik","Ahilik","Yeseviyye","Nakşibendilik"],a:2,e:"Ahilik, orta Asya ve Anadolu'da gelişen; dürüstlük, vefa, cömertlik ve dayanışmayı esas alan esnaf-zanaatkâr ahlak teşkilatıdır."},
+  {s:"8. Tasavvuf ve Manevi Hayat",q:"Nefsi terbiye ederek Allah'a manevi yakınlık kurmayı amaçlayan İslami iç disipline ne denir?",o:["Kelam","Fıkıh","Tasavvuf","Siyer","Mantık"],a:2,e:"Tasavvuf, nefsi terbiye ederek Allah'a manevi yakınlık kurmayı amaçlayan İslami iç disiplin ve gelenektir."},
+  {s:"8. Tasavvuf ve Manevi Hayat",q:"Tasavvufta maddi ve manevi açıdan olgunlaşmış; 'tam insan' ideali hangi kavramla ifade edilir?",o:["Veli","Mürşid","İnsân-ı Kâmil","Şeyh","Derviş"],a:2,e:"İnsân-ı Kâmil, tasavvufta maddi ve manevi açıdan olgunlaşmış, Allah'ın ahlakıyla ahlaklanmış 'tam insan' idealidir."},
+  {s:"8. Tasavvuf ve Manevi Hayat",q:"13. yüzyıl Anadolu mutasavvıfı; Mesnevi'nin yazarı ve Mevleviliğin kurucusu kimdir?",o:["Yunus Emre","Hacı Bektaş Veli","Mevlana Celaleddin Rumi","Ahmet Yesevi","Hacı Bayram Veli"],a:2,e:"Mevlana Celaleddin Rumi, 13. yüzyıl Anadolu mutasavvıfıdır; Mesnevi'nin yazarı ve Mevleviliğin kurucusudur."},
+  {s:"8. Tasavvuf ve Manevi Hayat",q:"13–14. yüzyıl Türk mutasavvıf şairi; sevgi ve hoşgörü temelli şiirleriyle tanınan büyük şair kimdir?",o:["Mevlana","Yunus Emre","Hacı Bayram Veli","Pir Sultan Abdal","Ahmet Yesevi"],a:1,e:"Yunus Emre, 13–14. yüzyıl Türk mutasavvıf şairidir; sevgi ve hoşgörü temelli şiirleriyle tanınır."},
+  {s:"8. Tasavvuf ve Manevi Hayat",q:"Allah'ı anmak; belirli isimlerin tekrarlanmasıyla yapılan manevi pratiğe ne denir?",o:["Semah","Zikir","Muhabbet","Erkân","Rabıta"],a:1,e:"Zikir, Allah'ı anmaktır; belirli isimlerin veya duaların tekrarlanmasıyla yapılan manevi pratiktir."},
+  {s:"9. İslam Düşüncesi ve Mezhepler",q:"İmam Azam Ebu Hanife tarafından kurulan; Türkler arasında en yaygın Sünni fıkıh mezhebi hangisidir?",o:["Maliki","Şafi","Hanbeli","Hanefi","Caferi"],a:3,e:"Hanefi mezhebi, İmam Azam Ebu Hanife tarafından kurulmuş ve Türkler arasında en yaygın Sünni fıkıh mezhebine dönüşmüştür."},
+  {s:"9. İslam Düşüncesi ve Mezhepler",q:"İmam Maturidi tarafından kurulan; Hanefi çevrelerinde yaygın Sünni kelam okulu hangisidir?",o:["Eş'arilik","Maturidilik","Mutezile","Cebriye","Selefiyye"],a:1,e:"Maturidilik, İmam Maturidi tarafından kurulmuş Sünni kelam okuludur; Hanefi çevrelerinde yaygındır ve akla daha geniş yer verir."},
+  {s:"9. İslam Düşüncesi ve Mezhepler",q:"Aklı ön plana çıkaran; Ehl-i Sünnet'ten ayrılan kelam okulu hangisidir?",o:["Eş'arilik","Maturidilik","Mutezile","Haricilik","Cebriye"],a:2,e:"Mutezile, aklı ön plana çıkaran kelam okuludur; Allah'ın sıfatları ve kul iradesi konularında Ehl-i Sünnet'ten ayrılan görüşler savunmuştur."},
+  {s:"9. İslam Düşüncesi ve Mezhepler",q:"Abbasi döneminde Bağdat'ta kurulan; tercüme hareketinin merkezi olan büyük ilim kurumu hangisidir?",o:["Darülhadis","Beytülhikme","Medrese","Rasathane","Kütüphane"],a:1,e:"Beytülhikme, Abbasi döneminde (9. yy) Bağdat'ta kurulan; tercüme hareketinin merkezi olan büyük ilim ve kütüphane kurumudur."},
+  {s:"9. İslam Düşüncesi ve Mezhepler",q:"Hz. Ali'nin halifeliğini esas alan; imamet inancıyla Sünnilerden ayrılan İslam mezhebi hangisidir?",o:["Haricilik","Mutezile","Şia","Alevilik","Mürcie"],a:2,e:"Şia, Hz. Ali'nin halifeliğini esas alan; imamet inancıyla Sünnilerden ayrılan İslam mezhebidir."},
+  {s:"10. Diğer Dinler ve İnançlar",q:"Hristiyanlığın Tanrı'nın Baba, Oğul ve Kutsal Ruh olarak üç kişide tezahür ettiğini savunan inanca ne denir?",o:["Vaftiz","Sakrament","Teslis","Konfirmasyon","Evharistiya"],a:2,e:"Teslis, Hristiyanlığın Tanrı'nın Baba, Oğul ve Kutsal Ruh olarak üç kişide tezahür ettiğini savunan inanç doktrinidir. İslam bu inancı reddeder."},
+  {s:"10. Diğer Dinler ve İnançlar",q:"Hinduizm ve Budizm'de kişinin eylemlerinin gelecekteki varoluşunu belirleyen evrensel nedensellik yasasına ne denir?",o:["Nirvana","Karma","Reenkarnasyon","Yoga","Dharma"],a:1,e:"Karma, Hinduizm ve Budizm'de kişinin bu ve önceki hayatlardaki eylemlerinin gelecekteki varoluşunu belirleyen evrensel nedensellik yasasıdır."},
+  {s:"10. Diğer Dinler ve İnançlar",q:"Tanrı'nın evreni yarattığını; ancak sonrasına müdahale etmediğini savunan görüş hangisidir?",o:["Ateizm","Agnostisizm","Deizm","Panteizm","Teizm"],a:2,e:"Deizm, Tanrı'nın evreni yarattığını; ancak sonrasına müdahale etmediğini ve vahyin olmadığını savunan görüştür."}
+];
+
+const sData={};
+Q.forEach(q=>{if(!sData[q.s])sData[q.s]={t:0,c:0};sData[q.s].t++;});
+let ans=new Array(Q.length).fill(null),ok=0,no=0;
+
+function render(){
+  const c=document.getElementById('qc');
+  c.innerHTML='';
+  let cur='',secIdx=0;
+  const secColors=['#6d28d9','#0f766e','#b45309','#1d4ed8','#7c3aed','#065f46','#9f1239','#1e40af','#4d7c0f','#6b21a8','#0e7490','#c2410c'];
+  Q.forEach((q,i)=>{
+    if(q.s!==cur){
+      cur=q.s;
+      secIdx++;
+      const col=secColors[(secIdx-1)%secColors.length];
+      c.innerHTML+=`<div class="sec-pill" style="border-left-color:${col}"><span class="sp-num">${secIdx}</span>📖 ${q.s}</div>`;
+    }
+    const done=ans[i]!==null;
+    const opts=q.o.map((o,j)=>{
+      let cl='';
+      if(done){cl=j===q.a?'cor':ans[i]===j?'wrn':'';}
+      const L=['A','B','C','D','E'][j];
+      const ic=done&&j===q.a?'✓':done&&ans[i]===j?'✗':L;
+      return `<button class="opt ${cl}" onclick="pick(${i},${j})" ${done?'disabled':''}><span class="ol">${ic}</span>${o}</button>`;
+    }).join('');
+    let exp='';
+    if(done){
+      const good=ans[i]===q.a;
+      exp=`<div class="exp ${good?'ce':'we'}">${good?'Doğru! ':'Yanlış! Doğru cevap: <strong>'+q.o[q.a]+'</strong> — '}${q.e}</div>`;
+    }
+    c.innerHTML+=`<div class="q-card${done?' answered':''}"><div class="q-head"><div class="q-num">${i+1}</div><div class="q-txt">${q.q}</div></div><div class="opts">${opts}</div>${exp}</div>`;
+  });
+}
+
+function pick(i,j){
+  if(ans[i]!==null)return;
+  ans[i]=j;
+  if(j===Q[i].a){ok++;sData[Q[i].s].c++;}else no++;
+  document.getElementById('sc').textContent=ok;
+  document.getElementById('sw').textContent=no;
+  document.getElementById('sr').textContent=Q.length-ok-no;
+  const done=ans.filter(a=>a!==null).length;
+  const pct=Math.round(done/Q.length*100);
+  document.getElementById('pf').style.width=pct+'%';
+  document.getElementById('ptxt').textContent='Soru '+done+' / '+Q.length;
+  document.getElementById('ppct').textContent='%'+pct+' tamamlandı';
+  render();
+  setTimeout(()=>{
+    const cards=document.querySelectorAll('.q-card');
+    if(cards[i+1])cards[i+1].scrollIntoView({behavior:'smooth',block:'center'});
+  },280);
+  if(ans.every(a=>a!==null))setTimeout(showResult,500);
+}
+
+function showResult(){
+  document.getElementById('qc').style.display='none';
+  const p=Math.round(ok/Q.length*100);
+  let em='😔',gr='Tekrar çalışmanız gerekiyor.';
+  if(p>=90){em='🏆';gr='Mükemmel! Muhteşem bir başarı!';}
+  else if(p>=80){em='🥇';gr='Çok iyi! Harika bir performans!';}
+  else if(p>=70){em='🥈';gr='İyi! Biraz daha çalışmayla mükemmel olur!';}
+  else if(p>=60){em='🥉';gr='Orta. Eksik bölümleri tekrar gözden geçirin.';}
+  else if(p>=50){em='📚';gr='Geçer not. Konuları pekiştirin!';}
+  document.getElementById('re').textContent=em;
+  document.getElementById('rscore').textContent=ok+'/70';
+  document.getElementById('rgrade').textContent=gr;
+  document.getElementById('rc').textContent=ok;
+  document.getElementById('rw').textContent=no;
+  document.getElementById('rp').textContent='%'+p;
+  document.getElementById('rs').style.display='block';
+  setTimeout(()=>{
+    document.getElementById('bg').style.width=(ok/70*100)+'%';
+    document.getElementById('bg').textContent=ok+' Doğru';
+    document.getElementById('br').style.width=(no/70*100)+'%';
+    document.getElementById('br').textContent=no+' Yanlış';
+  },200);
+  const bk=document.getElementById('bkd');
+  bk.innerHTML='';
+  Object.entries(sData).forEach(([s,d])=>{
+    const sp=Math.round(d.c/d.t*100);
+    const cl=sp>=70?'bk-f-hi':sp>=40?'bk-f-mid':'bk-f-lo';
+    const star=sp>=90?'⭐':sp>=70?'✅':sp>=40?'📚':'❌';
+    bk.innerHTML+=`<div class="bk-row"><span class="bk-nm">${star} ${s}</span><div class="bk-bg"><div class="bk-f ${cl}" style="width:${sp}%"></div></div><span class="bk-sc">${d.c}/${d.t}</span></div>`;
+  });
+  document.getElementById('rs').scrollIntoView({behavior:'smooth'});
+}
+
+function restart(){
+  ans=new Array(Q.length).fill(null);ok=0;no=0;
+  Object.keys(sData).forEach(k=>{sData[k].c=0;});
+  document.getElementById('qc').style.display='';
+  document.getElementById('rs').style.display='none';
+  document.getElementById('sc').textContent=0;
+  document.getElementById('sw').textContent=0;
+  document.getElementById('sr').textContent=70;
+  document.getElementById('pf').style.width='0%';
+  document.getElementById('ptxt').textContent='Soru 0 / 70';
+  document.getElementById('ppct').textContent='%0 tamamlandı';
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+render();
+</script>
+</body>
+</html>
